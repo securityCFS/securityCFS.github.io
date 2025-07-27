@@ -68,7 +68,6 @@ Education & Background
   * Zhiyuan Honored Scholarship recipient (2019-2023)
   
 * **B.E. in Economics**, Shanghai Jiao Tong University (2019-2023)
-  * Double degree program
 
 Technical Expertise
 ======
