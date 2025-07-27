@@ -1,49 +1,103 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+Welcome! I am Yifei Yao, a Master's student in the School of Automation at Shanghai Jiao Tong University, working in the Machine Vision and Autonomous Systems Lab under the supervision of Prof. Jun-Guo Lu. I am expected to graduate in June 2026 and am actively pursuing Ph.D. opportunities in robotics and embodied AI.
 
-A data-driven personal website
+My research focuses on **Embodied AI for Humanoid Robots**, where I develop intelligent control systems that enable robots to understand and interact with their environments through language-guided planning and decision-making. With a unique **interdisciplinary background in both automation and economics**, I am particularly passionate about bridging the gap between high-level reasoning and low-level motor control while considering the **commercial viability and societal impact** of humanoid robotics solutions.
+
+## Core Research Contributions
+
+My work centers around developing **unified learning frameworks** that can generalize across different humanoid morphologies and tasks. My flagship contribution is the **Generalized Behavior Cloning (GBC) framework**, which addresses fundamental challenges in humanoid robot control through cross-morphology learning and task generalization.
+
+Research Interests
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+* **Embodied Control for Humanoids**: Developing advanced control algorithms for bipedal robots and humanoid systems with focus on commercial deployment feasibility
+* **Language Model Guided Planning & Decision Making**: Integrating large language models with robotic control for intelligent task execution and cost-effective automation
+* **Reinforcement Learning & Imitation Learning**: Creating robust learning frameworks for complex robotic behaviors with optimized sample efficiency
+* **Computer Vision & Diffusion Models**: Applying cutting-edge vision techniques to robotic perception and motion generation
+* **Techno-Economic Analysis**: Evaluating the economic viability and market potential of humanoid robotics solutions across different industrial sectors
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
-
-Getting started
+Current Research & Industry Collaborations
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+I am currently working as a **Cooperative Reinforcement Learning Engineer at Baosight Group**, where I develop humanoid RL control algorithms and imitation learning systems deployed on their humanoid robots. My research combines technical innovation with market-driven analysis, applying economic principles to optimize deployment strategies and cost-effectiveness:
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+* **Baosight Group (2024.09-present)**: Leading development of production-ready humanoid control systems, successfully deploying GBC-based algorithms on commercial humanoid platforms for manufacturing applications. Conducting ROI analysis to identify optimal automation scenarios and cost-reduction opportunities.
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+* **Limx Dynamics (2024.05-2024.09)**: Co-researched improved control algorithms for point-foot legged robots, contributing to their next-generation locomotion systems with enhanced stability and efficiency. Applied techno-economic analysis to evaluate market positioning strategies.
 
-**Markdown generator**
+* **ZHENDUI Ltd. (2024.01-2024.05)**: Developed real-time sea surface obstacle detection and ranging systems achieving 10+ FPS on NVIDIA A4000, implementing advanced computer vision algorithms for maritime safety applications while assessing commercial viability and market penetration potential.
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+* **SAIC Motor (2023.06-2023.12)**: Created 3D real-time surrounding view systems for MPV vehicles using Android + OpenGL ES, deployed in production vehicles for enhanced driver assistance
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+* **Shanghai Sport University (2022.09-2023.04)**: Built real-time 3D human pose estimation systems for athletic performance analysis, supporting multiple Olympic sports training programs
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+Publications & Research Output
+======
+My research has resulted in several high-impact publications that advance the state-of-the-art in humanoid robotics:
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+**Published & Accepted:**
+* **IROS 2025 (Oral)**: "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Language Models" - Introduces language-guided reward design and evaluation for bipedal locomotion with cross-task generalization capabilities
+
+**Under Review:**
+* **IEEE Transactions on Robotics**: "GBC: Generalized Behavior Cloning Framework for Humanoid Locomotion and Manipulation Tasks" - A unified framework enabling cross-morphology learning that significantly improves sample efficiency and task generalization in humanoid control
+
+**Upcoming Submissions (2026):**
+* **ICRA 2026**: "GBC-MUJICA: Motion Diffusion and Trajectory Planning Model for Cross-Morphology Humanoid Architectures" - Extends GBC with diffusion models for improved motion planning
+* **CVPR 2026**: "GBC-BTR: Physics Aware Vision-Language-Behavior Model for Embodied Realtime Humanoid Task Reasoning" - Integrates multimodal perception with behavior cloning for complex task execution
+
+**Key Technical Innovations:**
+- Developed cross-morphology learning algorithms that enable knowledge transfer between different humanoid platforms
+- Created unified behavior representation frameworks that bridge locomotion and manipulation tasks
+- Pioneered language-guided planning systems for real-time humanoid control
+- Achieved significant improvements in sample efficiency compared to traditional reinforcement learning approaches
+
+Education & Background
+======
+* **M.S. in Automation**, Shanghai Jiao Tong University (2023-2026)
+  * Machine Vision and Autonomous Systems Lab
+  * Advisor: Prof. Jun-Guo Lu
+  * First Prize Scholarship recipient (2023-2026)
+
+* **B.E. in Automation**, Shanghai Jiao Tong University (2019-2023)
+  * Zhiyuan Honored Scholarship recipient (2019-2023)
+  
+* **B.E. in Economics**, Shanghai Jiao Tong University (2019-2023)
+  * Double degree program
+
+Technical Expertise
+======
+**Programming Languages**: C++, Python, Java, Kotlin, CUDA
+**Development Platforms**: Qt, OpenGL, Android Studio
+**ML/AI Frameworks**: PyTorch, TensorFlow, CuDNN, OpenCV
+**Robotics Simulation**: Isaac Sim, MuJoCo, ROS1 & ROS2
+
+Awards & Achievements
+======
+* **RoboCup 2021**: First Prize
+* **MCM/ICM 2021**: Outstanding Winner (Meritorious Winner)
+* **First Prize Scholarship**: Master's program (2023-2026)
+* **Zhiyuan Honored Scholarship**: Undergraduate program (2019-2023)
+
+Looking Forward
+======
+I am actively seeking Ph.D. opportunities to further advance my research in embodied AI and humanoid robotics. My research vision focuses on developing **autonomous humanoid systems** that can seamlessly adapt to new environments and tasks through advanced learning paradigms.
+
+**Research Vision & Goals:**
+- Advancing cross-morphology learning to enable universal humanoid control systems
+- Developing next-generation multimodal AI that integrates vision, language, and physical reasoning
+- Creating scalable frameworks for real-world deployment of intelligent humanoid systems
+- Bridging the gap between laboratory research and industrial applications in humanoid robotics
+
+My long-term goal is to contribute foundational technologies that will enable humanoid robots to become reliable partners in human-centric environments, from manufacturing floors to domestic settings.
+
+**Personal Interests:** Beyond research, I enjoy developing personal applications, exploring anime culture, playing CRPGs, and practicing traditional Chinese instruments.
+
+**Research Materials:** My publications and technical reports are available in the [Files](/files/) section, including the GBC framework technical documentation.
+
+**Contact**: Feel free to reach out at [jameswhiteyao@gmail.com](mailto:jameswhiteyao@gmail.com) or [godchaser@sjtu.edu.cn](mailto:godchaser@sjtu.edu.cn)
