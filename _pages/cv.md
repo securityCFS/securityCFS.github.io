@@ -146,7 +146,7 @@ Awards & Achievements
 * **Outstanding Winner**, Mathematical Contest in Modeling (MCM) (2021)
   * Achieved the highest recognition in the international mathematical modeling competition
 
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
@@ -156,7 +156,7 @@ Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
 
 Research Interests & Future Goals
 ======
