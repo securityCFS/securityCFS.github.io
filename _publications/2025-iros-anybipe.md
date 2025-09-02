@@ -1,13 +1,14 @@
 ---
-title: "AnyBipe: An Automated End-To-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models"
+title: "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models"
 collection: publications
 category: conferences
 permalink: /publication/2025-iros-anybipe
-excerpt: 'This paper introduces a fully automated, end-to-end pipeline for bipedal robot training that leverages Large Language Models for automated reward design, training supervision, and sim-to-real validation.'
+excerpt: 'An automated end-to-end pipeline for bipedal robot training that leverages Large Language Models for reward design, training supervision, and sim-to-real validation.'
+date: 2024-09-08
 venue: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)'
 slidesurl: '/files/iros25_anybipe.pdf'
-paperurl: '/files/iros25_anybipe.pdf'
-citation: 'Yao, Y., He, W., Gu, C., Du, J., Tan, F., Zhu, Z., & Lu, J. (2025). &quot;AnyBipe: An Automated End-To-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models.&quot; <i>Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>. <b>Oral Presentation</b>.'
+paperurl: 'https://arxiv.org/abs/2409.08904'
+citation: 'Yao, Y., He, W., Gu, C., Du, J., Tan, F., Zhu, Z., & Lu, J. (2025). &quot;AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models.&quot; <i>Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>. <b>Oral Presentation</b>.'
 ---
 
 ## Abstract

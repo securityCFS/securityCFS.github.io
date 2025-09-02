@@ -102,9 +102,9 @@ My doctoral research aims to develop an end-to-end, deployable model for humanoi
 
 * **The "Cerebellum" (Achieved):** My GBC and GBC Diffusion frameworks have successfully implemented this "Cerebellum". GBC provides the robust, low-level imitation learning policy, while GBC Diffusion serves as an efficient planner, generating long-horizon, physically-plausible motions.
 
-* **The "Brain" (Ongoing Work - GBC-BTR):** My current GBC-BTR project focuses on developing the "Brain". It investigates how to translate a VLM's high-level output into actionable commands for the Diffusion-based "Cerebellum", creating a complete Reinforcement Learning from Human Feedback (RLHF) loop.
+* **The "Brain" (Ongoing Research):** My current research focuses on developing high-level reasoning systems. This work investigates how to translate vision-language model outputs into actionable commands for robotic systems, creating complete learning loops that integrate human feedback and environmental interaction.
 
-* **Future Work (The PhD Trajectory):** Upon successfully validating the GBC-BTR proof-of-concept, my doctoral work will extend this framework from locomotion to complex manipulation tasks, achieving unified embodied decision-making capabilities.
+* **Future Work (The PhD Trajectory):** My doctoral research will extend current frameworks from locomotion to complex manipulation tasks, with the goal of achieving unified embodied decision-making capabilities for autonomous humanoid systems.
 
 **Research Contributions & Technical Details**
 
@@ -130,13 +130,13 @@ Publications
 Publications
 ======
 **Published & Accepted:**
-* **Yao, Y.**, He, W., Gu, C., Du, J., Tan, F., Zhu, Z., & Lu, J. (2025). "AnyBipe: An Automated End-To-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models." *Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. [**Oral Presentation**]
+* **Yao, Y.**, He, W., Gu, C., Du, J., Tan, F., Zhu, Z., & Lu, J. (2025). "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models." *Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. [**Oral Presentation**]
 
-**Under Review:**
-* **Yao, Y.**, Luo, C., Du, J., & Lu, J. (2025). "GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation." *Submitted to IEEE Transactions on Robotics (T-RO)*.
+**Published Preprints:**
+* **Yao, Y.**, Luo, C., Du, J., & Lu, J. (2024). "GBC: Generalized Behavior Cloning for Humanoid Robots." *arXiv preprint arXiv:2508.09960*.
 
-**Upcoming Submissions (2026):**
-* **Yao, Y.** & Lu, J. (2025). "Motion Diffusion and Trajectory Planning Model for Cross-Morphology Humanoid Architectures." *To be submitted to IEEE International Conference on Robotics and Automation (ICRA) 2026*.
+**In Progress:**
+* Continuing research on multimodal learning frameworks for autonomous humanoid systems
 
 Awards & Achievements
 ======

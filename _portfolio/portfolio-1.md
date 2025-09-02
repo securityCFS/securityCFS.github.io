@@ -32,7 +32,7 @@ The Generalized Behavior Cloning (GBC) Framework represents a major breakthrough
 - **Commercial Deployment**: Active use at Baosight Group for manufacturing automation
 - **Open Source Release**: Framework available at [GitHub](https://github.com/sjtu-mvasl-robotics/GBC)
 - **Research Adoption**: Used by 10+ research groups worldwide
-- **Conference Recognition**: Accepted for publication in IEEE Transactions on Robotics
+- **Academic Recognition**: Research published in arXiv and presented at conferences
 
 ## Technical Stack
 

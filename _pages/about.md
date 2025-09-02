@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! I am Yifei Yao, a Master's student in the School of Automation at Shanghai Jiao Tong University, working in the Machine Vision and Autonomous Systems Lab under the supervision of Prof. Jun-Guo Lu. I am expected to graduate in June 2026 and am actively pursuing Ph.D. opportunities in robotics and embodied AI.
+Welcome! I am Yifei Yao, a Master's student in the School of Automation at Shanghai Jiao Tong University, working in the Machine Vision and Autonomous Systems Lab under the supervision of Prof. Jun-Guo Lu. I am expected to graduate in April 2026 and am actively pursuing Ph.D. opportunities in robotics and embodied AI.
 
 My research focuses on **Embodied AI for Humanoid Robots**, where I develop intelligent control systems that enable robots to understand and interact with their environments through language-guided planning and decision-making. With a unique **interdisciplinary background in both automation and economics**, I am particularly passionate about bridging the gap between high-level reasoning and low-level motor control while considering the **commercial viability and societal impact** of humanoid robotics solutions.
 
@@ -41,15 +41,14 @@ Publications & Research Output
 ======
 My research has resulted in several high-impact publications that advance the state-of-the-art in humanoid robotics:
 
-**Published & Accepted:**
+**Accepted:**
 * **IROS 2025 (Oral)**: "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Language Models" - Introduces language-guided reward design and evaluation for bipedal locomotion with cross-task generalization capabilities
 
-**Under Review:**
-* **IEEE Transactions on Robotics**: "GBC: Generalized Behavior Cloning Framework for Humanoid Locomotion and Manipulation Tasks" - A unified framework enabling cross-morphology learning that significantly improves sample efficiency and task generalization in humanoid control
+**Published Preprints:**
+* **arXiv 2024**: "GBC: Generalized Behavior Cloning for Humanoid Robots" - A unified framework enabling cross-morphology learning that significantly improves sample efficiency and task generalization in humanoid control
 
-**Upcoming Submissions (2026):**
-* **ICRA 2026**: "GBC-MUJICA: Motion Diffusion and Trajectory Planning Model for Cross-Morphology Humanoid Architectures" - Extends GBC with diffusion models for improved motion planning
-* **CVPR 2026**: "GBC-BTR: Physics Aware Vision-Language-Behavior Model for Embodied Realtime Humanoid Task Reasoning" - Integrates multimodal perception with behavior cloning for complex task execution
+**In Progress:**
+* Continuing research on multimodal learning frameworks for autonomous humanoid systems
 
 **Key Technical Innovations:**
 - Developed cross-morphology learning algorithms that enable knowledge transfer between different humanoid platforms
