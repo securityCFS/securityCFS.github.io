@@ -23,7 +23,8 @@ Education
 
 * **B.Sc. Automation**, Shanghai Jiao Tong University (2019.9 - 2023.6)
   * School of Electronic Information and Electric Engineering (SEIEE)
-  * Zhiyuan Honors Program | GPA: 3.69/4.0 (Major)
+  * Zhiyuan Honors Program
+  * GPA: 3.65/4.0 (Major)
   * Zhiyuan Honored Bachelor degree recipient
   * Outstanding Graduate of Shanghai Jiao Tong University
   
@@ -36,9 +37,8 @@ Research & Work Experience
 * **Research Intern**, Baosight Co., Ltd. (2024.9 - 2025.8)
   * Developed and deployed humanoid robot reinforcement learning algorithms and designed imitation learning systems
   * Successfully demonstrated humanoid robot capabilities of locomotion and manipulation at WAIC 2025, Shanghai
-  * Conducting ROI analysis to identify optimal automation scenarios and cost-reduction opportunities
 
-* **Graduate Research Assistant**, Machine Vision and Autonomous System Laboratory (2024.11 - Present)
+* **Graduate Research Assistant**, Machine Vision and Autonomous System Laboratory (2024.12 - Present)
   * Conducting research on reinforcement learning and imitation learning for humanoid robots
   * Supervised by Prof. Junguo Lu at Shanghai Jiao Tong University
   * Focus: GBC framework development and cross-morphology learning
@@ -94,18 +94,6 @@ Research Vision and Interests
 * **Generative Models for Motion:** Text-to-Motion Synthesis, Diffusion Models for Trajectory Planning, World Models
 * **Autonomous Systems:** End-to-End Robot Learning, Sim-to-Real Transfer, Research Automation Workflows
 
-**Doctoral Research Vision**
-
-My doctoral research aims to develop an end-to-end, deployable model for humanoid robots, enabling autonomous decision-making and task completion. My proposed architecture emulates a biological brain, comprising a high-level "cortical" system for reasoning and a low-level "cerebellar" system for motor control.
-
-* **The Goal: A Hierarchical Brain for Autonomous Humanoids:** I propose a novel architecture where a Vision-Language Model (VLM) acts as the slow-response "Brain" for task reasoning and strategic planning, while a Diffusion-RL hybrid model acts as the high-frequency "Cerebellum" for agile motor execution.
-
-* **The "Cerebellum" (Achieved):** My GBC and GBC Diffusion frameworks have successfully implemented this "Cerebellum". GBC provides the robust, low-level imitation learning policy, while GBC Diffusion serves as an efficient planner, generating long-horizon, physically-plausible motions.
-
-* **The "Brain" (Ongoing Research):** My current research focuses on developing high-level reasoning systems. This work investigates how to translate vision-language model outputs into actionable commands for robotic systems, creating complete learning loops that integrate human feedback and environmental interaction.
-
-* **Future Work (The PhD Trajectory):** My doctoral research will extend current frameworks from locomotion to complex manipulation tasks, with the goal of achieving unified embodied decision-making capabilities for autonomous humanoid systems.
-
 **Research Contributions & Technical Details**
 
 * **AnyBipe Framework:** Developed a fully automated, end-to-end pipeline to streamline the entire robot learning workflow. This framework accelerates research by leveraging LLMs for automated reward design, training supervision, and sim-to-real validation.
@@ -136,7 +124,7 @@ Publications
 * **Yao, Y.**, Luo, C., Du, J., & Lu, J. (2024). "GBC: Generalized Behavior Cloning for Humanoid Robots." *arXiv preprint arXiv:2508.09960*.
 
 **In Progress:**
-* Continuing research on multimodal learning frameworks for autonomous humanoid systems
+* Continuing research on multimodal learning frameworks for autonomous humanoid systems (will be released when accepted)
 
 Awards & Achievements
 ======
@@ -158,17 +146,6 @@ Awards & Achievements
 * **Outstanding Winner**, Mathematical Contest in Modeling (MCM) (2021)
   * Achieved the highest recognition in the international mathematical modeling competition
 
-Academic Service
-======
-* **Reviewer**, IEEE Robotics and Automation Letters (RA-L) (2024-2025)
-  * Peer reviewer for submissions in robotics and automation research
-
-* **Demonstrated at WAIC 2025**, Shanghai
-  * Showcased humanoid robot capabilities at the World Artificial Intelligence Conference
-
-* **Open Source Contributions** (2024)
-  * Developed and released comprehensive frameworks for humanoid robot training and deployment
-
 Talks
 ======
   <ul>{% for post in site.talks reversed %}
@@ -180,19 +157,6 @@ Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-
-Professional Service & Leadership
-======
-* **Peer Reviewer**: IEEE conferences and journals in robotics and AI
-* **Research Mentorship**: Supervising undergraduate research projects in humanoid robotics
-* **Industry Collaboration**: Leading technical partnerships between academia and industry for robotics commercialization
-* **Open Source Contributions**: Contributing to robotics simulation and control frameworks
-
-Languages
-======
-* **Chinese**: Native
-* **English**: Fluent (Academic and Professional)
-* **Japanese**: Conversational (Cultural interest and anime enthusiast)
 
 Research Interests & Future Goals
 ======
