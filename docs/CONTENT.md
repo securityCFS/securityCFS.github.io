@@ -73,8 +73,8 @@ Added [How Far Does a Frontier Agent Get as an Embodied Policy?](https://internr
 
 ## Research presentation
 
-`assets/css/studio.css` adds the homepage research layout and shared blue palette. The homepage uses `_includes/research-work.html` for larger selected-work cards; the complete list retains compact cards, topic filters, and citations. Optional `home_image` overrides only the homepage image.
+`assets/css/studio.css` adds the homepage layout and shared blue palette. The homepage begins with a first-person introduction and uses `_includes/research-work.html` for selected-work cards; the complete list retains compact cards, topic filters, and citations. Optional `home_image` overrides only the homepage image.
 
-The three demos in `_data/demos.yml` use short, silent excerpts of the released REAL, AnyBipe, and EBench videos. Exact source URLs are recorded in the data. REAL uses seconds 16–28, AnyBipe seconds 65–75, and EBench seconds 0–12. Posters are still frames from those same released videos. AnyBipe and EBench are explicitly distinguished as bipedal locomotion and simulation; these clips do not establish individual author contributions or new evaluation claims. Combined clips are roughly 2 MB. Only the active video plays; native playback controls remain available. Reduced-motion and data-saving preferences disable automatic playback, and inactive or offscreen videos pause.
+The retained demo assets in `_data/demos.yml` use short, silent excerpts of the released REAL, AnyBipe, and EBench videos. They are not currently embedded on the homepage. Exact source URLs are recorded in the data. REAL uses seconds 16–28, AnyBipe seconds 65–75, and EBench seconds 0–12. Posters are still frames from those same released videos. These clips do not establish individual author contributions or new evaluation claims.
 
 Keep the homepage selective. Do not invent research outcomes, personal contribution statements, or extra sections to increase apparent volume. Add a contribution account only when the author confirms it or a published author-contribution statement supports it.

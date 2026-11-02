@@ -5,7 +5,8 @@
     <span class="work-open" aria-hidden="true">↗</span>
   </a>
   <div class="paper-body work-body">
-    <div class="paper-meta"><span class="venue-badge{% if paper.category == 'preprints' %} venue-badge--preprint{% endif %}">{{ paper.venue_short }}</span><span>{{ paper.publication_year }}{% if paper.status == 'Accepted' %} · Accepted{% endif %}</span>{% if paper.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}</div>
+    {% assign paper_year = paper.publication_year | append: '' %}
+    <div class="paper-meta"><span class="venue-badge{% if paper.category == 'preprints' %} venue-badge--preprint{% endif %}">{{ paper.venue_short }}</span>{% unless paper.venue_short contains paper_year %}<span>{{ paper.publication_year }}</span>{% endunless %}{% if paper.status == 'Accepted' %}<span>Accepted</span>{% endif %}{% if paper.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}</div>
     <h3><a href="{{ paper.url | relative_url }}">{{ paper.short_name }}</a></h3>
     <p class="work-title">{{ paper.title }}</p>
     <p class="paper-summary">{{ paper.excerpt }}</p>
