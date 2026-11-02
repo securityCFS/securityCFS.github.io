@@ -1,10 +1,11 @@
+{% assign resource_arrow = ' ↗' %}{% if include.buttons %}{% assign resource_arrow = '' %}{% endif %}
 <div class="paper-links" aria-label="Resources for {{ paper.short_name | escape }}">
-{% if paper.paperurl %}<a href="{{ paper.paperurl }}">{{ paper.paper_label | default: "Paper" }} ↗</a>{% endif %}
-{% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project ↗</a>{% endif %}
-{% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code ↗</a>{% endif %}
-{% if paper.docsurl %}<a href="{{ paper.docsurl }}">Docs ↗</a>{% endif %}
-{% if paper.slidesurl %}<a href="{{ paper.slidesurl | relative_url }}">Slides ↗</a>{% endif %}
-{% if paper.publisherurl %}<a href="{{ paper.publisherurl }}">{{ paper.publisher_label | default: 'Publisher' }} ↗</a>{% endif %}
+{% if paper.paperurl %}<a href="{{ paper.paperurl }}">{{ paper.paper_label | default: "Paper" }}{{ resource_arrow }}</a>{% endif %}
+{% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project{{ resource_arrow }}</a>{% endif %}
+{% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code{{ resource_arrow }}</a>{% endif %}
+{% if paper.docsurl %}<a href="{{ paper.docsurl }}">Docs{{ resource_arrow }}</a>{% endif %}
+{% if paper.slidesurl %}<a href="{{ paper.slidesurl | relative_url }}">Slides{{ resource_arrow }}</a>{% endif %}
+{% if paper.publisherurl %}<a href="{{ paper.publisherurl }}">{{ paper.publisher_label | default: 'Publisher' }}{{ resource_arrow }}</a>{% endif %}
 
-{% if paper.benchmarkurl %}<a class="benchmark-link" href="{{ paper.benchmarkurl }}">Benchmark ↗</a>{% endif %}
+{% if paper.benchmarkurl %}<a class="benchmark-link" href="{{ paper.benchmarkurl }}">Benchmark{{ resource_arrow }}</a>{% endif %}
 </div>

@@ -1,5 +1,5 @@
 <div class="paper-authors">
   {% if include.full %}{% assign author_names = paper.authors %}{% else %}{% assign author_names = paper.authors_display | split: ', ' %}{% endif %}
   <p>{% for author_name in author_names %}{% unless forloop.first %}, {% endunless %}{% if author_name == site.author.name %}<strong>{{ author_name | escape }}</strong>{% else %}{{ author_name | escape }}{% endif %}{% if paper.equal_contributors contains author_name %}<sup class="equal-marker" title="Equal contribution" aria-label="equal contribution">*</sup>{% endif %}{% endfor %}</p>
-  {% if paper.equal_contributors %}<p class="contribution-note">* Equal contribution (co-first authors).</p>{% endif %}
+  {% if paper.equal_contributors and include.hide_legend != true %}<p class="contribution-note">* Equal contribution (co-first authors).</p>{% endif %}
 </div>

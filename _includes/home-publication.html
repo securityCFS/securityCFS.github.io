@@ -1,0 +1,14 @@
+<article class="home-paper" data-publication>
+  {% assign paper_year = paper.publication_year | append: '' %}
+  <div class="home-paper-media">
+    <span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>
+    {% if paper.image %}<a class="home-paper-image" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ paper.home_image | default: paper.image | relative_url }}" alt="" loading="lazy" width="192" height="128"></a>{% endif %}
+  </div>
+  <div class="home-paper-body">
+    <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
+    {% include paper-authors.html hide_legend=true %}
+    {% if paper.status == 'Accepted' %}<p class="home-paper-status">Accepted</p>{% endif %}
+    <p class="home-paper-summary">{{ paper.excerpt }}</p>
+    {% include paper-links.html buttons=true %}
+  </div>
+</article>

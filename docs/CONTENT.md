@@ -52,7 +52,7 @@ Before publishing, check the homepage, all publication groups, topic + text filt
 - REAL: Boyu Mi, Mengchen Ma, and Yifei Yao share first authorship. Verified on the official project page and arXiv PDF first page.
 - PICA-WAM: Yude Zou, Yifei Yao, and Guanbo Jiao share first authorship. Verified on the arXiv PDF first page, including its equal-contribution footnote.
 - InfCoiL: Yude Zou, Yifei Yao, and Yiwei Hao share first authorship. Explicitly confirmed by the site owner in this chat; the public OpenReview PDF was inaccessible during this check.
-- The homepage presents identity once in the hero; only inner pages use the profile sidebar. Avoid repeating the name and role as a second body heading on small screens.
+- The homepage and inner pages use the profile sidebar for identity. Avoid repeating the name and role as a second body heading on small screens.
 
 ## Honors, interests, and web report update, October 27, 2026
 
@@ -73,7 +73,7 @@ Added [How Far Does a Frontier Agent Get as an Embodied Policy?](https://internr
 
 ## Research presentation
 
-`assets/css/studio.css` adds the homepage layout and shared blue palette. The homepage begins with a first-person introduction and uses `_includes/research-work.html` for selected-work cards; the complete list retains compact cards, topic filters, and citations. Optional `home_image` overrides only the homepage image.
+`assets/css/studio.css` provides the shared blue palette. `assets/css/home.css` adjusts the homepage layout, based on the original Academic Pages sidebar and inspired by Minimal Light. The homepage uses `_includes/home-publication.html` for single-column, illustrated publication entries; the complete list retains its topic filters and citations. Optional `home_image` overrides only the homepage image.
 
 The retained demo assets in `_data/demos.yml` use short, silent excerpts of the released REAL, AnyBipe, and EBench videos. They are not currently embedded on the homepage. Exact source URLs are recorded in the data. REAL uses seconds 16–28, AnyBipe seconds 65–75, and EBench seconds 0–12. Posters are still frames from those same released videos. These clips do not establish individual author contributions or new evaluation claims.
 
