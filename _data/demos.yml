@@ -1,0 +1,27 @@
+- id: real
+  tab: Embodied agents
+  project: REAL
+  context: Physical robot · ECCV 2026
+  description: Explore, ask, and act in the real world.
+  video: /assets/media/real-preview.mp4
+  poster: /assets/media/real-poster.webp
+  url: https://internrobotics.github.io/REAL/
+  source: https://internrobotics.github.io/REAL/assets/real-world/real-world-demo.mp4
+- id: anybipe
+  tab: Robot learning
+  project: AnyBipe
+  context: Bipedal locomotion · IROS 2025
+  description: From language-guided rewards to robot control.
+  video: /assets/media/anybipe-preview.mp4
+  poster: /assets/media/anybipe-poster.webp
+  url: https://sjtu-mvasl-robotics.github.io/anybipe/
+  source: https://sjtu-mvasl-robotics.github.io/anybipe/static/videos/demo.mp4
+- id: manipulation
+  tab: Manipulation
+  project: EBench
+  context: Simulation · Technical report
+  description: In-context learning for contact-sensitive manipulation.
+  video: /assets/media/manipulation-preview.mp4
+  poster: /assets/media/manipulation-poster.webp
+  url: https://internrobotics.github.io/EBench-Astra-Tech-Report/
+  source: https://internrobotics.github.io/EBench-Astra-Tech-Report/media/cases/icl-gear.mp4

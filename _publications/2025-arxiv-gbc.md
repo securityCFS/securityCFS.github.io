@@ -1,49 +1,51 @@
 ---
-title: "GBC: Generalized Behavior Cloning for Humanoid Robots"
-collection: publications
+short_name: GBC
+arxiv: '2508.09960'
+date: '2025-08-13'
+publication_year: 2025
 category: preprints
-permalink: /publication/2024-arxiv-gbc
-excerpt: 'A unified imitation learning framework that enables cross-morphology learning for humanoid robots through novel algorithmic innovations and zero-shot motion retargeting.'
-date: 2025-08-09
-venue: 'arXiv preprint'
-paperurl: 'https://arxiv.org/abs/2508.09960'
-citation: 'Yao, Y., Luo, C., Du, J., & Lu, J. (2024). &quot;GBC: Generalized Behavior Cloning for Humanoid Robots.&quot; <i>arXiv preprint arXiv:2508.09960</i>.'
+venue: arXiv preprint
+venue_short: arXiv
+status: Preprint
+topic: Humanoid control
+selected: true
+selected_order: 4
+permalink: /publication/2025-arxiv-gbc/
+redirect_from:
+- /publication/2024-arxiv-gbc
+projecturl: https://sjtu-mvasl-robotics.github.io/gbc/
+codeurl: https://github.com/sjtu-mvasl-robotics/GBC
+docsurl: https://sjtu-mvasl-robotics.github.io/gbc/docs/intro
+image: /assets/images/research/gbc.webp
+image_alt: Humanoid imitation policies evaluated in Isaac Sim
+image_caption: Humanoid imitation in Isaac Sim. Figure from the official GBC repository.
+image_source: https://raw.githubusercontent.com/sjtu-mvasl-robotics/GBC/master/docs/images/isaacsim_demo.png
+excerpt: 'An open-source pathway from human motion to humanoid action: differentiable retargeting, DAgger-MMPPO, and an Isaac Lab training workflow.'
+layout: paper
+collection: publications
+verified_on: '2026-10-27'
+title: 'GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation'
+authors:
+- Yifei Yao
+- Chengyuan Luo
+- Jiaheng Du
+- Wentao He
+- Jun-Guo Lu
+paperurl: https://arxiv.org/abs/2508.09960
+sourceurl: https://arxiv.org/abs/2508.09960
+authors_display: Yifei Yao, Chengyuan Luo, Jiaheng Du, Wentao He, Jun-Guo Lu
+bibtex: |-
+  @misc{yao2025gbc,
+    title = {GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation},
+    author = {Yao, Yifei and Luo, Chengyuan and Du, Jiaheng and He, Wentao and Lu, Jun-Guo},
+    year = {2025},
+    url = {https://arxiv.org/abs/2508.09960},
+    eprint = {2508.09960},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.RO}
+  }
 ---
 
-## Abstract
+GBC combines a motion-data pipeline with a differentiable inverse-kinematics network, a DAgger-MMPPO learning algorithm, and the MMTransformer architecture. The paper evaluates imitation on heterogeneous humanoids and transfer to novel motions.
 
-The Generalized Behavior Cloning (GBC) framework represents a breakthrough in humanoid robotics by enabling universal imitation learning across different morphologies. This work addresses the fundamental challenge of transferring motor skills between heterogeneous humanoid platforms while maintaining high performance and sample efficiency.
-
-## Key Technical Innovations
-
-### Cross-Morphology Learning Architecture
-- **Universal Motion Representation**: Developed morphology-agnostic representation enabling knowledge transfer between different humanoid platforms
-- **Zero-Shot Motion Retargeting**: Novel neural network architecture for instant adaptation of motion data across robot configurations
-- **Scalable Framework**: Supports diverse humanoid morphologies from research platforms to commercial systems
-
-### Advanced Learning Algorithms
-- **Hybrid Learning Approach**: Combines stability of imitation learning with adaptability of reinforcement learning
-- **Sample Efficiency**: Dramatically reduces demonstration data requirements compared to traditional methods
-- **Robust Generalization**: Single trained policy handles both locomotion and manipulation tasks
-
-## Technical Achievements
-
-### Performance Metrics
-- **Real-time Control**: Maintains high-frequency control for stable robot operation
-- **Task Success Rate**: Demonstrates superior performance across diverse manipulation and locomotion tasks
-- **Training Efficiency**: Significantly faster convergence compared to pure reinforcement learning approaches
-- **Hardware Compatibility**: Successfully validated on multiple humanoid platforms
-
-## Open Source Contribution
-
-The complete GBC framework is open-sourced to enable broader community adoption and accelerate research in embodied AI. The framework provides foundational infrastructure for humanoid robot development.
-
-## Impact and Applications
-
-- **Research Acceleration**: Provides core infrastructure for humanoid robot development
-- **Industry Applications**: Demonstrates practical deployment capabilities
-- **Community Adoption**: Framework being used by multiple research groups worldwide
-
-**Paper**: [arXiv:2508.09960](https://arxiv.org/abs/2508.09960)
-
-This work establishes fundamental building blocks for developing truly autonomous humanoid systems capable of learning and adapting in real-world environments.
+The repository and documentation provide the public implementation and its release roadmap. The paper was first submitted to arXiv on August 13, 2025.

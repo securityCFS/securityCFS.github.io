@@ -1,14 +1,8 @@
 ---
-layout: archive
-title: "Portfolio"
+layout: academic
+title: "Research projects"
 permalink: /portfolio/
-author_profile: true
 ---
-
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<p>Project pages, implementations, and documentation for my selected work.</p>
+{% assign selected = site.publications | where: 'selected', true | sort: 'selected_order' %}
+{% for paper in selected %}{% include paper-card.html %}{% endfor %}

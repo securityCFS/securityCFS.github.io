@@ -1,0 +1,14 @@
+---
+layout: academic
+---
+<div class="paper-meta"><span class="venue-badge">{{ page.venue_short }}</span> <span>{{ page.publication_year }} · {{ page.status }}</span></div>
+{% assign paper = page %}
+{% include paper-authors.html full=true %}
+{% include paper-links.html %}
+<p class="paper-lead">{{ page.excerpt }}</p>
+{% if page.image %}<figure class="paper-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{{ page.image_caption }}</figcaption></figure>{% endif %}
+{{ content }}
+<h2>Reference</h2>
+{% include paper-citation.html %}
+<p class="muted">Metadata checked {{ page.verified_on | date: '%B %d, %Y' }}. <a href="{{ page.sourceurl }}">Original source ↗</a></p>
+<p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>

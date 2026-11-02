@@ -1,0 +1,6 @@
+---
+layout: null
+---
+{% assign papers = site.publications | sort: 'date' | reverse %}{% for paper in papers %}{{ paper.bibtex }}
+
+{% endfor %}

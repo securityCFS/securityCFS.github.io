@@ -1,0 +1,15 @@
+<article class="paper-card work-card" data-publication>
+  <a class="work-visual work-visual--{{ paper.short_name | slugify }}" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ paper.home_image | default: paper.image | relative_url }}" alt="" loading="lazy" width="640" height="390">
+    <span class="work-index">{{ forloop.index | prepend: '0' }}</span>
+    <span class="work-open" aria-hidden="true">↗</span>
+  </a>
+  <div class="paper-body work-body">
+    <div class="paper-meta"><span class="venue-badge{% if paper.category == 'preprints' %} venue-badge--preprint{% endif %}">{{ paper.venue_short }}</span><span>{{ paper.publication_year }}{% if paper.status == 'Accepted' %} · Accepted{% endif %}</span>{% if paper.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}</div>
+    <h3><a href="{{ paper.url | relative_url }}">{{ paper.short_name }}</a></h3>
+    <p class="work-title">{{ paper.title }}</p>
+    <p class="paper-summary">{{ paper.excerpt }}</p>
+    {% include paper-authors.html %}
+    {% include paper-links.html %}
+  </div>
+</article>

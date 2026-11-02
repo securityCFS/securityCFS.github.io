@@ -1,0 +1,10 @@
+<div class="paper-links" aria-label="Resources for {{ paper.short_name | escape }}">
+{% if paper.paperurl %}<a href="{{ paper.paperurl }}">{{ paper.paper_label | default: "Paper" }} ↗</a>{% endif %}
+{% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project ↗</a>{% endif %}
+{% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code ↗</a>{% endif %}
+{% if paper.docsurl %}<a href="{{ paper.docsurl }}">Docs ↗</a>{% endif %}
+{% if paper.slidesurl %}<a href="{{ paper.slidesurl | relative_url }}">Slides ↗</a>{% endif %}
+{% if paper.publisherurl %}<a href="{{ paper.publisherurl }}">{{ paper.publisher_label | default: 'Publisher' }} ↗</a>{% endif %}
+
+{% if paper.benchmarkurl %}<a class="benchmark-link" href="{{ paper.benchmarkurl }}">Benchmark ↗</a>{% endif %}
+</div>

@@ -1,167 +1,87 @@
 ---
-layout: archive
-title: "CV"
+layout: academic
+title: "Curriculum vitae"
+eyebrow: "Background & experience"
 permalink: /cv/
-author_profile: true
+excerpt: "Yifei Yao — Research Engineer in Robotics at Shanghai AI Laboratory, seeking PhD opportunities."
 redirect_from:
   - /resume
 ---
+<div class="page-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><a href="{{ '/files/publications.bib' | relative_url }}" download>Publication list / BibTeX ↓</a><button type="button" data-print-cv hidden>Print / Save as PDF ↓</button></div>
+<div class="cv-content" markdown="1">
 
-{% include base_path %}
+Research Engineer in Robotics at **Shanghai AI Laboratory**, seeking **PhD opportunities** in robot learning and embodied AI. My research focuses on **reinforcement learning**, **embodied agents**, and **robotic manipulation**.
 
-Personal Statement
-======
-My passion lies at the intersection of robotic embodiment and artificial intelligence, and my goal is to pioneer the next generation of autonomous robots capable of learning with human-like adaptability. As a Master's student at SJTU, I have built a solid foundation through research and collaboration spanning reinforcement learning, robotic control, computer vision, and language models, and have applied these skills to real-world challenges from commercialized systems to humanoid control. Eager to deepen my expertise and pursue innovative solutions, I am seeking a PhD opportunity to contribute to research on creating robots that can learn from and interact with the world in a more human-like manner.
+## Education
 
-Education
-======
-* **M.Sc. Control Science and Engineering**, Shanghai Jiao Tong University (2023.9 - Present)
-  * School of Electronic Information and Electric Engineering (SEIEE)
-  * GPA: 3.89/4.0
-  * Machine Vision and Autonomous Systems Lab
-  * Advisor: Prof. Jun-Guo Lu
+### Shanghai Jiao Tong University <span class="cv-date">Sep 2023 – Apr 2026</span>
+**M.Sc., Control Science and Engineering**<br>
+Machine Vision and Autonomous System Laboratory · Advisor: Prof. Jun-Guo Lu<br>
+GPA: 3.89/4.0 · Outstanding Graduate (2026)
 
-* **B.Sc. Automation**, Shanghai Jiao Tong University (2019.9 - 2023.6)
-  * School of Electronic Information and Electric Engineering (SEIEE)
-  * Zhiyuan Honors Program
-  * GPA: 3.65/4.0 (Major)
-  * Zhiyuan Honored Bachelor degree recipient
-  * Outstanding Graduate of Shanghai Jiao Tong University
-  
-* **B.Sc. Economics (Minor)**, Shanghai Jiao Tong University (2019.9 - 2023.6)
-  * Antai College of Economics and Management
-  * Interdisciplinary program combining technical automation with economic analysis
+### Shanghai Jiao Tong University <span class="cv-date">Sep 2019 – Jun 2023</span>
+**B.Eng., Automation** · Zhiyuan Honors Program<br>
+**Minor in Economics**, Antai College of Economics and Management<br>
+Major GPA: 3.69/4.0 · Outstanding Graduate of Shanghai Jiao Tong University
 
-Research & Work Experience
-======
-* **Research Intern**, Baosight Co., Ltd. (2024.9 - 2025.8)
-  * Developed and deployed humanoid robot reinforcement learning algorithms and designed imitation learning systems
-  * Successfully demonstrated humanoid robot capabilities of locomotion and manipulation at WAIC 2025, Shanghai
+## Research & engineering experience
 
-* **Graduate Research Assistant**, Machine Vision and Autonomous System Laboratory (2024.12 - Present)
-  * Conducting research on reinforcement learning and imitation learning for humanoid robots
-  * Supervised by Prof. Junguo Lu at Shanghai Jiao Tong University
-  * Focus: GBC framework development and cross-morphology learning
+### Shanghai AI Laboratory <span class="cv-date">Nov 2025 – Present</span>
+**Research Engineer, Robotics**
 
-* **Co-working and Product Testing**, LIMX Dynamics (2024.6 - 2024.10)
-  * Testing LIMX P1 Series bipedal robots and shifting research focus from industrial CV to robotics
-  * Supervised by Prof. Junguo Lu; Collaboration with LIMX Dynamics, Shenzhen, China
-  * Applied techno-economic analysis to evaluate market positioning strategies
+- Research in reinforcement learning, embodied agents, and robotic manipulation.
+- Shared first author of REAL (ECCV 2026), InfCoiL (NeurIPS 2026), PICA-WAM, and the EBench frontier-agent evaluation report; coauthor of the InternW0 series of technical reports.
 
-* **Algorithm Developer**, ZIDAI Industrial Collaboration (2023.11 - 2024.6)
-  * Designed Bird's Eye View (BEV) generation system for ship-based surrounding view and warning systems
-  * Fine-tuned and deployed semantic segmentation and distance prediction models
-  * Product successfully commercialized with assessment of commercial viability and market penetration
+### Turin Robotics / Shanghai Baosight Software <span class="cv-date">Jan 2025 – Jul 2025</span>
+**Reinforcement Learning Algorithm Engineer**
 
-* **Mobile Application Developer**, SAIC Motor AI Research Institute (2023.6 - 2023.11)
-  * Developed Android application for auto-calibration and surround view display in small vehicles
-  * Implemented Kotlin, JNI, OpenGL programming and user interface design
-  * Deployed in production vehicles for enhanced driver assistance
+- Developed reinforcement learning and imitation learning algorithms for humanoid robots.
 
-* **Collaborative Research Assistant**, Shanghai University of Sport (2022.11 - 2023.6)
-  * Designed and trained transformer-based models for human pose estimation and sequence analysis
-  * Developed integrated analysis system with GUI; system currently deployed and in active use
-  * Supporting multiple Olympic sports training programs
+### Machine Vision and Autonomous System Laboratory, SJTU
+**Graduate research · Advisor: Prof. Jun-Guo Lu**
 
-* **National Undergraduate Innovative Test Program**, Vision and Lidar Integrated Navigation (2020.11 - 2022.11)
-  * Participated in micro vehicle navigation research under supervision of Prof. Jingchuan Wang
-  * Gained foundational experience in sensor fusion and autonomous navigation systems
-  
-Technical Skills
-======
-* **Programming Languages**
-  * C/C++ (Advanced), Python (Advanced), MATLAB, LaTeX, Shell Scripting, Java
+- Developed GBC, an open-source framework for motion retargeting and whole-body humanoid imitation.
+- Developed AnyBipe, integrating language-guided reward design, robot training, and sim-to-real evaluation.
 
-* **Deep Learning & AI**
-  * PyTorch, TensorFlow, JAX, Weights & Biases, Isaac Gym, Isaac Lab, OpenAI Gym
+### Earlier engineering experience
 
-* **Robotics & Simulation**
-  * ROS/ROS2, Gazebo, MuJoCo, Isaac Sim, OpenCV, OpenGL
+- **LIMX Dynamics collaboration** (Jun – Oct 2024): bipedal robot testing and locomotion research.
+- **ZIDAI industrial collaboration** (Nov 2023 – Jun 2024): bird’s-eye-view perception, semantic segmentation, and distance estimation for maritime applications.
+- **SAIC Motor AI Research Institute** (Jun – Nov 2023): Android and OpenGL development for vehicle surround-view systems.
+- **Shanghai University of Sport collaboration** (Nov 2022 – Jun 2023): human pose estimation and motion-sequence analysis.
 
-* **Development Tools**
-  * Git/GitHub, Docker, Qt, CMake, Linux/Ubuntu, VS Code
+## Publications
 
-* **Hardware & Embedded**
-  * FPGA Development, Embedded Systems, Microcontrollers, Hardware-Software Integration
+</div>
+<p class="muted">Complete records, code links, and citations are on the <a href="{{ '/publications/' | relative_url }}">publications page</a>.</p>
+{% assign papers = site.publications | sort: 'date' | reverse %}
+<div class="cv-pubs">
+{% for category in site.publication_category %}
+<h3 class="cv-pub-group">{{ category[1].title }}</h3>
+{% for paper in papers %}{% if paper.category == category[0] %}{% include paper-card.html compact=true %}{% endif %}{% endfor %}
+{% endfor %}
+</div>
+<div class="cv-content" markdown="1">
 
-* **Languages**
-  * English (Fluent), Mandarin Chinese (Native), Japanese (Basic Reading)
+## Technical skills
 
-Research Vision and Interests
-======
-**Core Research Interests**
-* **Embodied Artificial Intelligence:** Foundation Models for Robotics, Language-Grounded Agents, Hierarchical Reinforcement & Imitation Learning
-* **Generative Models for Motion:** Text-to-Motion Synthesis, Diffusion Models for Trajectory Planning, World Models
-* **Autonomous Systems:** End-to-End Robot Learning, Sim-to-Real Transfer, Research Automation Workflows
+- **Programming:** Python, C/C++, MATLAB, Java, Kotlin.
+- **Learning & simulation:** PyTorch, Isaac Lab, Isaac Sim, Isaac Gym, MuJoCo.
+- **Robotics & systems:** ROS/ROS2, OpenCV, OpenGL, Linux, Docker, Git.
 
-**Research Contributions & Technical Details**
+## Selected honors
 
-* **AnyBipe Framework:** Developed a fully automated, end-to-end pipeline to streamline the entire robot learning workflow. This framework accelerates research by leveraging LLMs for automated reward design, training supervision, and sim-to-real validation.
+{% assign honor_groups = site.data.honors | group_by: 'group' %}
+{% for group in honor_groups %}
+### {{ group.name }}
+<ul class="cv-honors-list">
+{% for honor in group.items %}<li><strong>{{ honor.title }}</strong> ({{ honor.year }})<br><span class="muted">{{ honor.institution }}</span></li>{% endfor %}
+</ul>
+{% endfor %}
 
-* **GBC Framework:** Engineered a universal imitation learning system enabling heterogeneous humanoids to acquire complex motor skills from motion data. Key innovations include a differentiable IK network for zero-shot motion retargeting and a novel DAgger-MMPPO algorithm. Open-sourced at [https://github.com/sjtu-mvasl-robotics/GBC](https://github.com/sjtu-mvasl-robotics/GBC).
+## Contact
 
-* **GBC Diffusion:** Pioneered a text-driven, morphology-adaptive diffusion model that directly generates physically-plausible actions, serving as a high-level planner. By training directly on retargeted datasets, this model generates long-horizon motions (8s) in 50-100ms.
+[jameswhiteyao@gmail.com](mailto:jameswhiteyao@gmail.com) · [Google Scholar]({{ site.author.googlescholar }}) · [GitHub](https://github.com/securityCFS)<br>
+Academic email: [godchaser@sjtu.edu.cn](mailto:godchaser@sjtu.edu.cn)
 
-Awards & Achievements
-======
-* **RoboCup 2021**: First Prize - International robotics competition
-* **MCM/ICM 2021**: Outstanding Winner (Meritorious Winner) - Mathematical Contest in Modeling
-* **First Prize Scholarship**: Master's program (2023-2026) - Academic excellence recognition
-* **Zhiyuan Honored Scholarship**: Undergraduate program (2019-2023) - Top-tier academic performance
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Publications
-======
-**Published & Accepted:**
-* **Yao, Y.**, He, W., Gu, C., Du, J., Tan, F., Zhu, Z., & Lu, J. (2025). "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models." *Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. [**Oral Presentation**]
-
-**Published Preprints:**
-* **Yao, Y.**, Luo, C., Du, J., & Lu, J. (2024). "GBC: Generalized Behavior Cloning for Humanoid Robots." *arXiv preprint arXiv:2508.09960*.
-
-**In Progress:**
-* Continuing research on multimodal learning frameworks for autonomous humanoid systems (will be released when accepted)
-
-Awards & Achievements
-======
-* **Academic Scholarship (Tier 1)**, Shanghai Jiao Tong University (2024, 2025)
-  * Merit-based scholarship for exceptional academic performance during graduate studies
-
-* **Best Student Presentation Award**, China Association of Automation (CAA), Shanghai (2023, 2024)
-  * Recognized for outstanding academic presentation skills in consecutive years
-
-* **Zhiyuan Honor Scholarship**, Shanghai Jiao Tong University (2019-2023)
-  * Consecutive four-year scholarship for students in the Zhiyuan Honors Program
-
-* **Zhiyuan's Leadership Scholarship**, Shanghai Jiao Tong University (2022)
-  * For students demonstrating exceptional leadership and academic excellence
-
-* **National First Prize**, RoboCup Robot World Cup China Competition (2022)
-  * Led team to victory in China's premier robotics competition
-
-* **Outstanding Winner**, Mathematical Contest in Modeling (MCM) (2021)
-  * Achieved the highest recognition in the international mathematical modeling competition
-
-<!-- Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul> -->
-
-Research Interests & Future Goals
-======
-* Advancing cross-morphology learning for universal humanoid control systems
-* Developing next-generation multimodal AI integrating vision, language, and physical reasoning
-* Creating scalable frameworks for real-world deployment of intelligent humanoid systems
-* Bridging the gap between laboratory research and industrial applications in humanoid robotics
-* Contributing foundational technologies for humanoid robots in human-centric environments
+</div>

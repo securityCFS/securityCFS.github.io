@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Yifei Yao - Personal Website"
+title                    : "Yifei Yao | Robotics & Embodied AI"
 title_separator          : "-"
 name                     : &name "Yifei Yao"
-description              : &description "Graduate Student in School of Automation, Shanghai Jiao Tong Universitys"
+description              : &description "Research Engineer in Robotics at Shanghai AI Laboratory. Reinforcement learning, embodied agents, and robotic manipulation. Seeking PhD opportunities."
 url                      : https://securitycfs.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "securitycfs/securitycfs.github.io"
@@ -23,10 +23,10 @@ author:
   # Biographic information
   avatar           : "bio-mine.png"
   name             : "Yifei Yao"
-  pronouns         : # example: "she/her"  
-  bio              : "Graduate Student in School of Automation, Shanghai Jiao Tong University"
-  location         : "Minhang District, Shanghai, China"
-  employer         : "MVASL Lab, Shanghai Jiao Tong University"
+  pronouns         : "he/him"
+  bio              : "Research Engineer in Robotics at Shanghai AI Laboratory"
+  location         : "Shanghai, China"
+  employer         : "Shanghai AI Laboratory"
   uri              : # URL
   email            : "jameswhiteyao@gmail.com"
 
@@ -75,18 +75,18 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  preprints:
+    title: 'Preprints'
+  reports:
+    title: 'Technical Reports'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
@@ -134,7 +134,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "images/bio-mine.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -156,6 +156,24 @@ include:
   - _pages
   - files
 exclude:
+  - local
+  - docs
+  - scripts
+  - _posts
+  - _talks
+  - _teaching
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

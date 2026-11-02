@@ -1,33 +1,57 @@
 ---
-title: "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models"
-collection: publications
+short_name: AnyBipe
+title: 'AnyBipe: An Automated End-to-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models'
+authors:
+- Yifei Yao
+- Wentao He
+- Chenyu Gu
+- Jiaheng Du
+- Fuwei Tan
+- Zhen Zhu
+- Jun-Guo Lu
+arxiv: '2409.08904'
+date: '2025-10-19'
+publication_year: 2025
 category: conferences
-permalink: /publication/2025-iros-anybipe
-excerpt: 'An automated end-to-end pipeline for bipedal robot training that leverages Large Language Models for reward design, training supervision, and sim-to-real validation.'
-date: 2024-09-08
-venue: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)'
-slidesurl: '/files/iros25_anybipe.pdf'
-paperurl: 'https://arxiv.org/abs/2409.08904'
-citation: 'Yao, Y., He, W., Gu, C., Du, J., Tan, F., Zhu, Z., & Lu, J. (2025). &quot;AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models.&quot; <i>Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>. <b>Oral Presentation</b>.'
+venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)
+venue_short: IROS 2025
+status: Published
+topic: Humanoid control
+selected: true
+selected_order: 5
+permalink: /publication/2025-iros-anybipe/
+publisherurl: https://doi.org/10.1109/IROS60139.2025.11246492
+sourceurl: https://doi.org/10.1109/IROS60139.2025.11246492
+projecturl: https://sjtu-mvasl-robotics.github.io/anybipe/
+codeurl: https://github.com/sjtu-mvasl-robotics/AnyBipe
+slidesurl: /files/iros25_anybipe.pdf
+image: /assets/images/research/anybipe.webp
+image_alt: AnyBipe reward design, reinforcement learning, and sim-to-real evaluation pipeline
+image_caption: AnyBipe pipeline. Figure from the official project repository.
+image_source: https://raw.githubusercontent.com/sjtu-mvasl-robotics/AnyBipe/main/resources/pipeline.png
+excerpt: Language-guided reward design, reinforcement learning, and sim-to-real evaluation in one end-to-end pipeline for bipedal robots.
+layout: paper
+collection: publications
+verified_on: '2026-10-27'
+paperurl: https://arxiv.org/abs/2409.08904
+authors_display: Yifei Yao, Wentao He, Chenyu Gu, Jiaheng Du, Fuwei Tan, Zhen Zhu, Jun-Guo Lu
+bibtex: |-
+  @inproceedings{yao2025anybipe,
+    title = {AnyBipe: An Automated End-to-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models},
+    author = {Yifei Yao and Wentao He and Chenyu Gu and Jiaheng Du and Fuwei Tan and Zhen Zhu and Jun-Guo Lu},
+    year = {2025},
+    url = {https://arxiv.org/abs/2409.08904},
+    booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)},
+    doi = {10.1109/IROS60139.2025.11246492},
+    pages = {14790--14797},
+    publisher = {IEEE}
+  }
+redirect_from:
+- /publication/2025-iros-anybipe.html
 ---
 
-## Abstract
+AnyBipe links an LLM-guided reward-design module, reinforcement learning, and a sim-to-real homomorphic evaluation module. The public implementation includes training and deployment tools for bipedal locomotion.
 
-This paper presents AnyBipe, a revolutionary framework that streamlines the entire robot learning workflow through Large Language Model (LLM) integration. AnyBipe addresses the critical challenge of accelerating robotics research by automating traditionally manual processes including reward design, training supervision, and sim-to-real validation.
+The final IROS 2025 title is shown above. The linked arXiv version uses the earlier title “AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Large Language Models” and was first submitted in September 2024. These versions are listed once here.
 
-## Key Contributions
-
-- **Automated Reward Design**: LLM-powered reward function generation eliminates manual engineering
-- **Training Supervision**: Intelligent monitoring and adjustment of training processes
-- **Sim-to-Real Validation**: Automated pipeline for transferring learned behaviors to real robots
-- **Foundational Toolchain**: Establishes the infrastructure for developing complex autonomous agents
-
-## Technical Innovation
-
-The AnyBipe framework serves as a "foundational toolchain" that enables researchers to focus on high-level algorithm design while automating the tedious aspects of robot learning pipeline construction. This acceleration is crucial for advancing the field of embodied AI and autonomous robotics.
-
-## Impact
-
-By significantly reducing the time and expertise required for bipedal robot training, AnyBipe democratizes access to advanced robotics research and enables faster iteration cycles in autonomous agent development.
-
-**Status: Accepted for Oral Presentation at IROS 2025**
+**Published:** IROS 2025, pp. 14790–14797. DOI: [10.1109/IROS60139.2025.11246492](https://doi.org/10.1109/IROS60139.2025.11246492).

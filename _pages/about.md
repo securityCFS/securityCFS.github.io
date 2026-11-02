@@ -1,101 +1,51 @@
 ---
+layout: academic
 permalink: /
-title: "About Me"
-author_profile: true
-redirect_from: 
+title: "Yifei Yao — Robotics & Embodied AI"
+excerpt: "Research Engineer in Robotics at Shanghai AI Laboratory. Reinforcement learning, embodied agents, and robotic manipulation. Seeking PhD opportunities."
+home: true
+redirect_from:
   - /about/
   - /about.html
 ---
 
-Welcome! I am Yifei Yao, a Master's student in the School of Automation at Shanghai Jiao Tong University, working in the Machine Vision and Autonomous Systems Lab under the supervision of Prof. Jun-Guo Lu. I am expected to graduate in April 2026 and am actively pursuing Ph.D. opportunities in robotics and embodied AI.
+<section class="research-hero" aria-labelledby="identity-title">
+  <div class="hero-copy">
+    <div class="hero-identity">
+      <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Yifei Yao" width="84" height="96">
+      <div><h1 id="identity-title">Yifei Yao<span class="identity-dot">.</span></h1><p>Research Engineer, Robotics<br><a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a></p></div>
+    </div>
+    <p class="hero-statement">I study how robots <em>learn</em>,<br><em>reason</em>, and <em>act</em>.</p>
+    <p class="hero-description">My research connects reinforcement learning, embodied agents, and robotic manipulation, with an emphasis on the feedback between decisions and physical interaction.</p>
+    <div class="hero-links"><a class="action-primary" href="#research">Explore my research <span aria-hidden="true">↓</span></a><a href="{{ site.author.googlescholar }}">Scholar ↗</a><a href="https://github.com/{{ site.author.github }}">GitHub ↗</a></div>
+    <p class="hero-background">M.Sc., Shanghai Jiao Tong University · 2026<br>Advised by Prof. Jun-Guo Lu</p>
+  </div>
+  <div class="demo-stage" data-demo-stage>
+    <div class="demo-topline"><span class="live-dot" aria-hidden="true"></span><span>Research in motion</span><span class="demo-counter">01 — 03</span></div>
+    {% for demo in site.data.demos %}
+    <div id="demo-panel-{{ demo.id }}" class="demo-panel" role="tabpanel" aria-labelledby="demo-tab-{{ demo.id }}"{% unless forloop.first %} hidden{% endunless %}>
+      <div class="demo-viewport"><video controls muted loop playsinline preload="none" poster="{{ demo.poster | relative_url }}" aria-label="{{ demo.project }}: {{ demo.description | escape }}"><source src="{{ demo.video | relative_url }}" type="video/mp4">Your browser does not support embedded video. <a href="{{ demo.url }}">View the project demonstration.</a></video></div>
+      <div class="demo-caption"><div><p class="demo-context">{{ demo.context }}</p><p class="demo-description"><strong>{{ demo.project }}</strong> / {{ demo.description }}</p></div><a href="{{ demo.url }}" aria-label="Full {{ demo.project }} project">↗</a></div>
+    </div>
+    {% endfor %}
+    <div class="demo-tabs" role="tablist" aria-label="Research demonstrations" data-demo-tabs hidden>{% for demo in site.data.demos %}<button type="button" id="demo-tab-{{ demo.id }}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="demo-panel-{{ demo.id }}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"><span>0{{ forloop.index }}</span>{{ demo.tab }}</button>{% endfor %}</div>
+  </div>
+</section>
 
-My research focuses on **Embodied AI for Humanoid Robots**, where I develop intelligent control systems that enable robots to understand and interact with their environments through language-guided planning and decision-making. With a unique **interdisciplinary background in both automation and economics**, I am particularly passionate about bridging the gap between high-level reasoning and low-level motor control while considering the **commercial viability and societal impact** of humanoid robotics solutions.
+<section id="phd" class="phd-strip" aria-labelledby="phd-title">
+  <div class="phd-status"><span class="status-dot" aria-hidden="true"></span> Open to PhD opportunities</div><h2 id="phd-title">Learning, reasoning, and physical interaction.</h2><a href="mailto:{{ site.author.email }}">Let's talk <span aria-hidden="true">↗</span></a>
+</section>
 
-## Core Research Contributions
+<section id="research" class="studio-section" aria-labelledby="research-title">
+  <div class="studio-heading"><div><p class="section-kicker">01 / Research</p><h2 id="research-title">From learning to physical interaction.</h2></div><a class="section-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a></div>
+  <div class="research-directions" aria-label="Research interests"><div><span>Reinforcement learning</span><p>Learning from interaction and physical feedback.</p></div><div><span>Embodied agents</span><p>Exploration, task reasoning, and grounded action.</p></div><div><span>Robotic manipulation</span><p>Contact, precision, and coordinated control.</p></div></div>
+  <div class="selected-grid">{% assign selected = site.publications | where: 'selected', true | sort: 'selected_order' %}{% for paper in selected %}{% include research-work.html %}{% endfor %}</div>
+  <div class="report-footnote"><span class="report-symbol" aria-hidden="true">↳</span><p>I also contributed to <a href="https://arxiv.org/abs/2609.27656">InternW0</a> and <a href="https://arxiv.org/abs/2609.31394">InternW0-Δ</a>, collaborative technical reports on physical world models and generalist manipulation.</p><a href="{{ '/publications/' | relative_url }}">Read more ↗</a></div>
+</section>
 
-My work centers around developing **unified learning frameworks** that can generalize across different humanoid morphologies and tasks. My flagship contribution is the **Generalized Behavior Cloning (GBC) framework**, which addresses fundamental challenges in humanoid robot control through cross-morphology learning and task generalization.
+<div class="updates-grid">
+  <section id="news" class="studio-section" aria-labelledby="news-title"><div class="studio-heading"><div><p class="section-kicker">02 / Field notes</p><h2 id="news-title">Recently.</h2></div></div><ul class="studio-news">{% for item in site.data.news limit:5 %}<li><time datetime="{{ item.date }}">{{ item.label }}</time><div>{{ item.text | markdownify }}</div></li>{% endfor %}</ul></section>
+  <section id="honors" class="studio-section honors-panel" aria-labelledby="honors-title"><p class="section-kicker">03 / Recognition</p><h2 id="honors-title">Along the way.</h2><ul class="honors-list">{% for honor in site.data.honors %}{% if honor.featured %}<li><span class="honor-year">{{ honor.year }}</span><div><strong>{{ honor.title }}</strong><span class="honor-institution">{{ honor.institution }}</span></div></li>{% endif %}{% endfor %}</ul><a class="section-link" href="{{ '/cv/#selected-honors' | relative_url }}">Background & all honors ↗</a></section>
+</div>
 
-Research Interests
-======
-* **Embodied Control for Humanoids**: Developing advanced control algorithms for bipedal robots and humanoid systems with focus on commercial deployment feasibility
-* **Language Model Guided Planning & Decision Making**: Integrating large language models with robotic control for intelligent task execution and cost-effective automation
-* **Reinforcement Learning & Imitation Learning**: Creating robust learning frameworks for complex robotic behaviors with optimized sample efficiency
-* **Computer Vision & Diffusion Models**: Applying cutting-edge vision techniques to robotic perception and motion generation
-* **Techno-Economic Analysis**: Evaluating the economic viability and market potential of humanoid robotics solutions across different industrial sectors
-
-Current Research & Industry Collaborations
-======
-I am currently working as a **Cooperative Reinforcement Learning Engineer at Baosight Group**, where I develop humanoid RL control algorithms and imitation learning systems deployed on their humanoid robots. My research combines technical innovation with market-driven analysis, applying economic principles to optimize deployment strategies and cost-effectiveness:
-
-* **Baosight Group (2024.09-present)**: Leading development of production-ready humanoid control systems, successfully deploying GBC-based algorithms on commercial humanoid platforms for manufacturing applications. Conducting ROI analysis to identify optimal automation scenarios and cost-reduction opportunities.
-
-* **Limx Dynamics (2024.05-2024.09)**: Co-researched improved control algorithms for point-foot legged robots, contributing to their next-generation locomotion systems with enhanced stability and efficiency. Applied techno-economic analysis to evaluate market positioning strategies.
-
-* **ZHENDUI Ltd. (2024.01-2024.05)**: Developed real-time sea surface obstacle detection and ranging systems achieving 10+ FPS on NVIDIA A4000, implementing advanced computer vision algorithms for maritime safety applications while assessing commercial viability and market penetration potential.
-
-* **SAIC Motor (2023.06-2023.12)**: Created 3D real-time surrounding view systems for MPV vehicles using Android + OpenGL ES, deployed in production vehicles for enhanced driver assistance
-
-* **Shanghai Sport University (2022.09-2023.04)**: Built real-time 3D human pose estimation systems for athletic performance analysis, supporting multiple Olympic sports training programs
-
-Publications & Research Output
-======
-My research has resulted in several high-impact publications that advance the state-of-the-art in humanoid robotics:
-
-**Accepted:**
-* **IROS 2025 (Oral)**: "AnyBipe: An End-to-End Framework for Training and Deploying Bipedal Robots Guided by Language Models" - Introduces language-guided reward design and evaluation for bipedal locomotion with cross-task generalization capabilities
-
-**Published Preprints:**
-* **arXiv 2024**: "GBC: Generalized Behavior Cloning for Humanoid Robots" - A unified framework enabling cross-morphology learning that significantly improves sample efficiency and task generalization in humanoid control
-
-**In Progress:**
-* Continuing research on multimodal learning frameworks for autonomous humanoid systems
-
-**Key Technical Innovations:**
-- Developed cross-morphology learning algorithms that enable knowledge transfer between different humanoid platforms
-- Created unified behavior representation frameworks that bridge locomotion and manipulation tasks
-- Pioneered language-guided planning systems for real-time humanoid control
-- Achieved significant improvements in sample efficiency compared to traditional reinforcement learning approaches
-
-Education & Background
-======
-* **M.S. in Automation**, Shanghai Jiao Tong University (2023-2026)
-  * Machine Vision and Autonomous Systems Lab
-  * Advisor: Prof. Jun-Guo Lu
-  * First Prize Scholarship recipient (2023-2026)
-
-* **B.E. in Automation**, Shanghai Jiao Tong University (2019-2023)
-  * Zhiyuan Honored Scholarship recipient (2019-2023)
-  
-* **B.E. in Economics**, Shanghai Jiao Tong University (2019-2023)
-
-Technical Expertise
-======
-**Programming Languages**: C++, Python, Java, Kotlin, CUDA
-**Development Platforms**: Qt, OpenGL, Android Studio
-**ML/AI Frameworks**: PyTorch, TensorFlow, CuDNN, OpenCV
-**Robotics Simulation**: Isaac Sim, MuJoCo, ROS1 & ROS2
-
-Awards & Achievements
-======
-* **RoboCup 2021**: First Prize
-* **MCM/ICM 2021**: Outstanding Winner (Meritorious Winner)
-* **First Prize Scholarship**: Master's program (2023-2026)
-* **Zhiyuan Honored Scholarship**: Undergraduate program (2019-2023)
-
-Looking Forward
-======
-I am actively seeking Ph.D. opportunities to further advance my research in embodied AI and humanoid robotics. My research vision focuses on developing **autonomous humanoid systems** that can seamlessly adapt to new environments and tasks through advanced learning paradigms.
-
-**Research Vision & Goals:**
-- Advancing cross-morphology learning to enable universal humanoid control systems
-- Developing next-generation multimodal AI that integrates vision, language, and physical reasoning
-- Creating scalable frameworks for real-world deployment of intelligent humanoid systems
-- Bridging the gap between laboratory research and industrial applications in humanoid robotics
-
-My long-term goal is to contribute foundational technologies that will enable humanoid robots to become reliable partners in human-centric environments, from manufacturing floors to domestic settings.
-
-**Personal Interests:** Beyond research, I enjoy developing personal applications, exploring anime culture, playing CRPGs, and practicing traditional Chinese instruments.
-
-**Research Materials:** My publications and technical reports are available in the [Files](/files/) section, including the GBC framework technical documentation.
-
-**Contact**: Feel free to reach out at [jameswhiteyao@gmail.com](mailto:jameswhiteyao@gmail.com) or [godchaser@sjtu.edu.cn](mailto:godchaser@sjtu.edu.cn)
+<section id="contact" class="studio-contact" aria-labelledby="contact-title"><div><p class="section-kicker">A shared research question?</p><h2 id="contact-title">Get in touch.</h2><a class="contact-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="{{ '/cv/' | relative_url }}">Curriculum vitae ↗</a><a href="{{ site.author.googlescholar }}">Google Scholar ↗</a><a href="https://github.com/{{ site.author.github }}">GitHub ↗</a><a href="{{ site.author.orcid }}">ORCID ↗</a></div></section>
