@@ -10,7 +10,7 @@ redirect_from:
 <div class="page-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><a href="{{ '/files/publications.bib' | relative_url }}" download>Publication list / BibTeX ↓</a><button type="button" data-print-cv hidden>Print / Save as PDF ↓</button></div>
 <div class="cv-content" markdown="1">
 
-Research Engineer in Robotics at **Shanghai AI Laboratory**, seeking **PhD opportunities** in robot learning and embodied AI. My research focuses on **reinforcement learning**, **embodied agents**, and **robotic manipulation**.
+Research Engineer in Robotics at **Shanghai AI Laboratory**, seeking **PhD opportunities** in robot learning and embodied AI. My research interests include **offline reinforcement learning**, **agentic reinforcement learning**, **embodied agents**, and **robotic manipulation**.
 
 ## Education
 

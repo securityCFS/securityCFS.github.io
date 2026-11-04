@@ -1,3 +1,6 @@
+- date: "2026-10-26"
+  label: "Oct 2026"
+  text: "Our [EBench report](https://arxiv.org/abs/2610.35832) is on arXiv, studying direct robot control and an agent harness with post-trained policies."
 - date: "2026-10-19"
   label: "Oct 2026"
   text: "[PICA-WAM](https://arxiv.org/abs/2610.26813) is on arXiv: learning visual perturbation invariance for world action models."

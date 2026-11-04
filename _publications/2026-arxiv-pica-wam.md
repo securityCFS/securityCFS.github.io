@@ -8,6 +8,10 @@ venue: arXiv preprint
 venue_short: arXiv
 status: Preprint
 topic: World action models
+image: /assets/images/research/pica-wam.webp
+image_alt: Overview of PICA-WAM and robustness to changes in visual appearance
+image_caption: Overview of PICA-WAM. Figure from the paper.
+image_source: https://arxiv.org/html/2610.26813v1/teaser.png
 codeurl: https://github.com/YudeZou/PICA-WAM-release
 excerpt: Cross-appearance self-alignment encourages world action models to produce consistent action representations under task-irrelevant visual changes.
 permalink: /publication/2026-arxiv-pica-wam/

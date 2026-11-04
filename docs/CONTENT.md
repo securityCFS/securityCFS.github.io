@@ -8,13 +8,13 @@ Create `_publications/YYYY-venue-short-name.md`, using an existing record as a r
 
 - Categories: `conferences`, `preprints`, `reports`.
 - Topics: `Humanoid control`, `Embodied agents`, `World action models`, `UAV control`. If adding a topic, also add a filter button in `_pages/publications.html`.
-- Set `selected: true` and a unique `selected_order` to feature a paper on the homepage. Leave these unset for other work.
+- The homepage lists every publication in reverse date order. `selected` and `selected_order` still control the separate legacy project listing.
 - Use `projecturl`, `codeurl`, `docsurl`, `slidesurl`, and `publisherurl` only for verified, available resources. Unreleased code should not have a dead Code button.
 - Keep preprint and conference versions in one record, linking both versions and using the final published title and year.
 - For long author lists, shorten only `authors_display`; preserve every author in `authors` and BibTeX. Use `equal_contributors` (a list of exact author names) for verified shared first authorship. Cards and paper detail pages render stars, an equal-contribution legend, and a co-first-author badge for Yifei Yao. Keep BibTeX names free of presentation markers. Do not infer equal contribution.
 - Month-only dates use the first day for sorting (InfCoiL: September 2026; UAV preprint: January 2026). The UI displays the verified year or month, not these sorting days.
 
-New records automatically appear on Publications, CV, and the downloadable `/files/publications.bib`. Selected records also appear on the homepage and legacy project listing.
+New records automatically appear on the homepage, Publications, CV, and the downloadable `/files/publications.bib`. Selected records also appear in the legacy project listing.
 
 ## News and personal information
 
@@ -73,8 +73,14 @@ Added [How Far Does a Frontier Agent Get as an Embodied Policy?](https://internr
 
 ## Research presentation
 
-`assets/css/studio.css` provides the shared blue palette. `assets/css/home.css` adjusts the homepage layout, based on the original Academic Pages sidebar and inspired by Minimal Light. The homepage uses `_includes/home-publication.html` for single-column, illustrated publication entries; the complete list retains its topic filters and citations. Optional `home_image` overrides only the homepage image.
+`assets/css/studio.css` provides the shared blue palette. `assets/css/home.css` adjusts the homepage layout, based on the original Academic Pages sidebar and inspired by Minimal Light. The homepage uses `_includes/home-publication.html` for single-column publication entries; the Publications page retains its topic filters and citations. Optional `home_image` overrides only the homepage image.
 
 The retained demo assets in `_data/demos.yml` use short, silent excerpts of the released REAL, AnyBipe, and EBench videos. They are not currently embedded on the homepage. Exact source URLs are recorded in the data. REAL uses seconds 16–28, AnyBipe seconds 65–75, and EBench seconds 0–12. Posters are still frames from those same released videos. These clips do not establish individual author contributions or new evaluation claims.
 
-Keep the homepage selective. Do not invent research outcomes, personal contribution statements, or extra sections to increase apparent volume. Add a contribution account only when the author confirms it or a published author-contribution statement supports it.
+Do not invent research outcomes, personal contribution statements, or extra sections to increase apparent volume. Add a contribution account only when the author confirms it or a published author-contribution statement supports it.
+
+## Publication update, November 4, 2026
+
+Google Scholar rate-limited automated access during this check, so the current Scholar list could not be independently read in full. The owner's interests now include offline and agentic reinforcement learning, as explicitly requested; they are presented as interests rather than claims of published results.
+
+The EBench project is listed once, with the title, author order, and date of its [arXiv report](https://arxiv.org/abs/2610.35832) (October 26, 2026). Its first three authors share equal contribution. Its [project page](https://internrobotics.github.io/EBench-Astra-Tech-Report/) retains the earlier web report's title and author order; it is linked as a project rather than entered as a second publication. No unrelated same-name authors were added.

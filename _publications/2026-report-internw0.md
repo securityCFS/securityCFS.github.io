@@ -8,6 +8,10 @@ venue: arXiv technical report
 venue_short: Technical report
 status: Technical report
 topic: World action models
+image: /assets/images/research/internw0.webp
+image_alt: InternW0 overview of training data, video-action model, and evaluation
+image_caption: InternW0 overview. Figure from the official project page.
+image_source: https://internrobotics.github.io/internw0/images/report/overview.png
 projecturl: https://internrobotics.github.io/internw0/
 codeurl: https://github.com/InternRobotics/InternW0
 excerpt: An asymmetric video-action architecture couples future visual dynamics with continuous robot control, supporting asynchronous prediction and contact-aware interaction.

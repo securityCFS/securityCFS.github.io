@@ -8,6 +8,10 @@ venue: arXiv technical report
 venue_short: Technical report
 status: Technical report
 topic: World action models
+image: /assets/images/research/internw0-delta.webp
+image_alt: InternW0-Delta world-action model architecture
+image_caption: InternW0-Delta architecture. Figure from the official project page.
+image_source: https://internrobotics.github.io/InternW0-Delta/assets/figures/architecture.png
 projecturl: https://internrobotics.github.io/InternW0-Delta/
 excerpt: A world action model combining predictive dynamics, semantic guidance, and geometric priors, pretrained on more than 20,000 hours of open data.
 permalink: /publication/2026-report-internw0-delta/
