@@ -1,5 +1,5 @@
 {% if paper.videos %}
-{% if include.compact %}<details class="paper-demo"><summary>Watch {% if paper.videos.size == 1 %}demo{% else %}demos{% endif %} <span aria-hidden="true">▶</span></summary>{% else %}<section class="paper-demo-gallery" aria-label="{{ paper.short_name | escape }} demonstrations"><h2>{% if paper.videos.size == 1 %}Demo{% else %}Demos{% endif %}</h2>{% endif %}
+{% if include.compact %}<details class="paper-demo"><summary>Watch {% if paper.videos.size == 1 %}demo{% else %}demos{% endif %}</summary>{% else %}<section class="paper-demo-gallery" aria-label="{{ paper.short_name | escape }} demonstrations"><h2>{% if paper.videos.size == 1 %}Demo{% else %}Demos{% endif %}</h2>{% endif %}
 {% for video in paper.videos %}
 <figure class="research-video">
   <h3>{{ video.title }}</h3>
@@ -8,7 +8,7 @@
     {% if video.captions %}<track kind="captions" src="{{ video.captions | relative_url }}" srclang="en" label="English" default>{% endif %}
     <a href="{{ video.src | relative_url }}">Watch {{ video.title }}</a>
   </video>
-  <figcaption>{{ video.caption }}{% if video.source %} <a href="{{ video.source }}">Source ↗</a>{% endif %}</figcaption>
+  <figcaption>{{ video.caption }}{% if video.source %} <a href="{{ video.source }}">Source</a>{% endif %}</figcaption>
 </figure>
 {% endfor %}
 {% if include.compact %}</details>{% else %}</section>{% endif %}

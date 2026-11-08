@@ -2,7 +2,6 @@
   <a class="work-visual work-visual--{{ paper.short_name | slugify }}" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true">
     <img src="{{ paper.home_image | default: paper.image | relative_url }}" alt="" loading="lazy" width="640" height="390">
     <span class="work-index">{{ forloop.index | prepend: '0' }}</span>
-    <span class="work-open" aria-hidden="true">↗</span>
   </a>
   <div class="paper-body work-body">
     {% assign paper_year = paper.publication_year | append: '' %}

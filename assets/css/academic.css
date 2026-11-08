@@ -172,12 +172,9 @@ main:focus{
 }
 .profile-links a{
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   max-width:183px;
   color:var(--ink)
-}
-.profile-links span{
-  color:var(--muted)
 }
 .profile-opportunity{
   display:flex;
@@ -897,7 +894,6 @@ main:focus{
 
 .paper-demo { margin: 14px 0 0; }
 .paper-demo > summary { width: fit-content; cursor: pointer; color: var(--accent); font-size: 12px; font-weight: 600; padding: 5px 0; }
-.paper-demo > summary span { font-size: 10px; margin-left: 4px; }
 .research-video { margin: 16px 0 24px; }
 .research-video h3 { font-size: 15px; margin: 0 0 10px; }
 .research-video video { display: block; width: 100%; height: auto; max-height: 560px; background: #111820; border: 1px solid var(--line); border-radius: 4px; }

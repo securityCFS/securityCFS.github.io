@@ -3,10 +3,6 @@
   max-width: 1120px;
 }
 
-.home-page .wordmark:before {
-  display: none;
-}
-
 .home-page .site-grid.home-layout {
   display: grid;
   grid-template-columns: 190px minmax(0, 1fr);
@@ -73,10 +69,10 @@
   margin: 0 0 8px;
   padding: 3px 8px;
   border-radius: 3px;
-  background: #33558d;
-  color: #fff;
+  background: var(--tint);
+  color: #33558d;
   font-size: 10px;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -108,16 +104,17 @@
   align-items: center;
   min-height: 32px;
   padding: 4px 9px;
-  border: 1px solid #697384;
+  border: 1px solid var(--line);
   border-radius: 3px;
-  color: var(--ink);
+  color: var(--accent);
   line-height: 1.35;
 }
 
 .home-paper .paper-links a:hover {
   color: var(--accent);
   border-color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .home-report-note { font-size: 13px; color: var(--muted); line-height: 1.7; margin: 18px 0 0; }
