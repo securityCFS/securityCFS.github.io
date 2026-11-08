@@ -1,8 +1,9 @@
 {% assign resource_arrow = ' ↗' %}{% if include.buttons %}{% assign resource_arrow = '' %}{% endif %}
-{% if paper.paperurl or paper.projecturl or paper.codeurl or paper.docsurl or paper.slidesurl or paper.publisherurl or paper.benchmarkurl %}
+{% if paper.paperurl or paper.projecturl or paper.codeurl or paper.docsurl or paper.slidesurl or paper.publisherurl or paper.benchmarkurl or paper.demourl %}
 <div class="paper-links" aria-label="Resources for {{ paper.short_name | escape }}">
 {% if paper.paperurl %}<a href="{{ paper.paperurl }}">{{ paper.paper_label | default: "Paper" }}{{ resource_arrow }}</a>{% endif %}
 {% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project{{ resource_arrow }}</a>{% endif %}
+{% if paper.demourl %}<a href="{{ paper.demourl | relative_url }}">Explore examples{{ resource_arrow }}</a>{% endif %}
 {% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code{{ resource_arrow }}</a>{% endif %}
 {% if paper.docsurl %}<a href="{{ paper.docsurl }}">Docs{{ resource_arrow }}</a>{% endif %}
 {% if paper.slidesurl %}<a href="{{ paper.slidesurl | relative_url }}">Slides{{ resource_arrow }}</a>{% endif %}

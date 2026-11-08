@@ -4,6 +4,8 @@
 
 On November 8, 2026, the owner reviewed the local refresh and explicitly authorized pushing it after the ABI wording update. This approval covers the reviewed homepage content and demos. Keep future unpublished research changes in local preview until authorized.
 
+The owner subsequently approved adding the ongoing embodied agent RL project and examples of its VQA and skill-task design. This preview describes research in progress, not a completed paper or validated long-horizon training result.
+
 The public site uses Jekyll and GitHub Pages. Main pages use `_layouts/academic.html`; individual papers use `_layouts/paper.html`. No external JavaScript libraries or remote fonts are needed by these pages.
 
 ## Add a paper once
@@ -21,6 +23,7 @@ Create `_publications/YYYY-venue-short-name.md`, using an existing record as a r
 - ABI remains a demo-first preview until the paper release. Keep method diagrams, technical explanations and draft benchmark tables out of the served site. Retain detailed drafts and unused media under ignored `local/homepage-intake/` for later review.
 - Set `show_status: true` to display a pending manuscript's exact status on cards. When a full author list is not settled, use `authors_note` to make this explicit. Do not export a citation with an incomplete author list.
 - Ongoing projects without a settled paper author list may omit `authors` and `authors_display`; do not turn an owner role into a fabricated publication author list. ARIEL is such a project.
+- The embodied agent RL examples use unaltered simulator images, reference answers, and demonstration replay frames. Keep these labels visible; do not describe them as student-policy successes. `demourl` links cards to the interactive examples. Private provenance stays outside the public repository.
 - Citation provenance uses `bibtex_source`, `bibtex_source_label`, and `bibtex_verified_on`. Prefer an actual source export. Keep pending export status explicit, and do not describe metadata-derived citations as Scholar exports.
 
 New records automatically appear on the homepage, Publications, CV, and the downloadable `/files/publications.bib`. Selected records also appear in the legacy project listing.

@@ -1,0 +1,53 @@
+<section class="agent-examples" id="examples" aria-labelledby="agent-examples-title">
+  <h2 id="agent-examples-title">From seeing to acting</h2>
+  <p class="example-note">A look at the data and task design, using recorded simulator frames and reference labels.</p>
+
+  <section class="agent-example" aria-labelledby="grounding-title">
+    <p class="example-kicker">01 / Embodied VQA</p>
+    <h3 id="grounding-title">Where is the target, relative to the hand?</h3>
+    <p>One scene supports questions about image location, relative height, and where to move. The model receives RGB views and measured robot state; the simulator supplies reference labels for training.</p>
+    <div class="grounding-views">
+      <figure><img src="{{ '/assets/images/research/agent-rl/vqa-overlook.png' | relative_url }}" alt="Overhead view of two robot arms, an apple beside the right hand, and a fruit bowl on the left." width="640" height="360" loading="lazy"><figcaption>Scene view · pick up the apple and place it in the bowl</figcaption></figure>
+      <figure><div class="wrist-reference"><img src="{{ '/assets/images/research/agent-rl/vqa-wrist.png' | relative_url }}" alt="Right wrist camera: the apple appears at the top centre, above the open gripper fingers." width="384" height="288" loading="lazy"><span class="wrist-grid" aria-hidden="true"></span></div><figcaption>Right wrist view · 3 × 3 image regions</figcaption></figure>
+    </div>
+    <div class="vqa-question" data-vqa-question>
+      <h4 id="location-question">In which region is the centre of the apple?</h4>
+      <div class="vqa-answers" role="group" aria-labelledby="location-question" hidden>
+        {% assign cells = 'Top left,Top,Top right,Left,Centre,Right,Bottom left,Bottom,Bottom right' | split: ',' %}
+        {% for cell in cells %}<button type="button" data-vqa-answer="{{ cell }}" aria-pressed="false">{{ cell }}</button>{% endfor %}
+      </div>
+      <p class="vqa-feedback" role="status" aria-live="polite" data-vqa-feedback></p>
+      <details class="reference-answer"><summary>Reveal simulator reference</summary><p><strong>Top.</strong> For this image-region question, matching the reference earns a reward of 1; a different region earns 0. These are reference labels, not predictions from the student.</p></details>
+    </div>
+    <details class="reference-answer"><summary>A second question: how high is the hand?</summary><p>How high are the right fingertips above the top of the apple?</p><p><strong>Reference: 3–10 cm above.</strong> The simulator measures approximately 5.2 cm. This question uses robot-relative geometry, rather than the apple’s position in the image.</p></details>
+  </section>
+
+  <section class="agent-example" aria-labelledby="feedback-title">
+    <p class="example-kicker">02 / VQA reinforcement learning</p>
+    <h3 id="feedback-title">Turn spatial questions into training feedback</h3>
+    <ol class="feedback-flow">
+      <li><strong>Sample answers</strong><span>The student proposes several answers for the same observation.</span></li>
+      <li><strong>Check against the scene</strong><span>Simulator labels score spatial accuracy, beyond the answer’s format.</span></li>
+      <li><strong>Update and re-evaluate</strong><span>RL uses the scored answers; agent replay helps retain tool-use behavior.</span></li>
+    </ol>
+    <p class="example-note">VQA reward and closed-loop task success are evaluated separately. Better answers alone do not establish better robot execution.</p>
+  </section>
+
+  <section class="agent-example" aria-labelledby="skills-title" data-skill-example>
+    <p class="example-kicker">03 / Short skills toward longer tasks</p>
+    <h3 id="skills-title">Break “put the apple in the bowl” into testable skills</h3>
+    <p>Local objectives make it possible to test alignment, grasping, and placement separately before studying their composition over a full task.</p>
+    <div class="skill-controls" role="group" aria-label="Explore manipulation skills" hidden>
+      <button type="button" data-skill-target="skill-align" aria-controls="skill-align" aria-pressed="true">1. Align</button>
+      <button type="button" data-skill-target="skill-grasp" aria-controls="skill-grasp" aria-pressed="false">2. Grasp &amp; lift</button>
+      <button type="button" data-skill-target="skill-place" aria-controls="skill-place" aria-pressed="false">3. Place</button>
+    </div>
+    <div class="skill-panels" aria-live="polite">
+      <figure id="skill-align" data-skill-panel><img src="{{ '/assets/images/research/agent-rl/align.png' | relative_url }}" alt="Demonstration replay before grasping: the right hand approaches the apple on the table." width="640" height="360" loading="lazy"><figcaption><strong>Align.</strong> Approach the target and hold the hand in position. The skill checks positioning while discouraging movement of the object.</figcaption></figure>
+      <figure id="skill-grasp" data-skill-panel><img src="{{ '/assets/images/research/agent-rl/lift.png' | relative_url }}" alt="Demonstration replay with the apple held by the right gripper after grasping." width="640" height="360" loading="lazy"><figcaption><strong>Grasp &amp; lift.</strong> Lift the object and keep it held. The skill checks sustained holding, rather than a gripper-close command alone.</figcaption></figure>
+      <figure id="skill-place" data-skill-panel><img src="{{ '/assets/images/research/agent-rl/place.png' | relative_url }}" alt="Demonstration replay at placement: the right hand opens over the fruit bowl." width="640" height="360" loading="lazy"><figcaption><strong>Place.</strong> Release the object at the destination and let it settle. The skill checks the final placement, release, and rest.</figcaption></figure>
+    </div>
+    <p class="example-note">Illustrative frames from one recorded demonstration replay. Each skill is a separate training objective; these frames do not show an RL-trained student completing the task. Long-horizon RL is ongoing work.</p>
+  </section>
+</section>
+<script src="{{ '/assets/js/agent-rl-demo.js' | relative_url }}" defer></script>
