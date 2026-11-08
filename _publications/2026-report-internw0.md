@@ -1,5 +1,6 @@
 ---
 short_name: InternW0
+personal_contribution: I contributed targeted post-training and tuning.
 arxiv: '2609.27656'
 date: '2026-09-23'
 publication_year: 2026
@@ -50,15 +51,18 @@ authors:
 paperurl: https://arxiv.org/abs/2609.27656
 sourceurl: https://arxiv.org/abs/2609.27656
 authors_display: Jisong Cai, Yao Mu, …, Yifei Yao, …, Weinan Zhang
+bibtex_source: https://arxiv.org/bibtex/2609.27656
+bibtex_source_label: arXiv export
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @misc{yao2026internw0,
+  @misc{cai2026internw0foundationalphysicalworld,
     title = {InternW0: A Foundational Physical World Model for Efficient Real-World Interactions},
-    author = {Cai, Jisong and Mu, Yao and Yang, Ganlin and Cao, Zhe and Tu, Zhangzheng and Gao, Xing and Li, Kailin and Zhan, Xinyu and Yang, Lixin and Zhu, Yangkun and Ma, Haoxiang and Zhou, Ming and Yu, Qiaojun and Xue, Yufei and He, Liqun and Yao, Yifei and Zhu, Yifan and Ling, Long and Jiang, Bingqi and Guo, Haoyu and Zhu, Xueyue and Zhou, Bowen and Zhao, Bin and Xue, Tianfan and Shen, Chunhua and Zhang, Weinan},
+    author = {Jisong Cai and Yao Mu and Ganlin Yang and Zhe Cao and Zhangzheng Tu and Xing Gao and Kailin Li and Xinyu Zhan and Lixin Yang and Yangkun Zhu and Haoxiang Ma and Ming Zhou and Qiaojun Yu and Yufei Xue and Liqun He and Yifei Yao and Yifan Zhu and Long Ling and Bingqi Jiang and Haoyu Guo and Xueyue Zhu and Bowen Zhou and Bin Zhao and Tianfan Xue and Chunhua Shen and Weinan Zhang},
     year = {2026},
-    url = {https://arxiv.org/abs/2609.27656},
     eprint = {2609.27656},
     archivePrefix = {arXiv},
-    primaryClass = {cs.RO}
+    primaryClass = {cs.RO},
+    url = {https://arxiv.org/abs/2609.27656}
   }
 ---
 

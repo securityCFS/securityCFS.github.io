@@ -1,5 +1,6 @@
 ---
 short_name: REAL
+personal_contribution: I built the RL environments, designed rewards, trained the RL policies, and designed and annotated task trajectories.
 arxiv: '2607.13653'
 date: '2026-07-15'
 publication_year: 2026
@@ -40,16 +41,15 @@ authors:
 paperurl: https://arxiv.org/abs/2607.13653
 sourceurl: https://arxiv.org/abs/2607.13653
 authors_display: Boyu Mi, Mengchen Ma, Yifei Yao, Xing Gao, Junting Chen, Yangzi Li, Zihou Zhu, Guohao Li, Zhenfei Yin, Tai Wang, Yao Mu, Jiangmiao Pang, Hanqing Wang
+bibtex_source: https://internrobotics.github.io/REAL/#citation
+bibtex_source_label: Official project citation
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @inproceedings{yao2026real,
+  @inproceedings{mi2026real,
     title = {Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation},
     author = {Mi, Boyu and Ma, Mengchen and Yao, Yifei and Gao, Xing and Chen, Junting and Li, Yangzi and Zhu, Zihou and Li, Guohao and Yin, Zhenfei and Wang, Tai and Mu, Yao and Pang, Jiangmiao and Wang, Hanqing},
-    year = {2026},
-    url = {https://arxiv.org/abs/2607.13653},
-    booktitle = {European Conference on Computer Vision (ECCV 2026)},
-    eprint = {2607.13653},
-    archivePrefix = {arXiv},
-    primaryClass = {cs.CV}
+    booktitle = {European Conference on Computer Vision},
+    year = {2026}
   }
 equal_contributors:
 - Boyu Mi

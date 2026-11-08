@@ -1,10 +1,12 @@
-<article class="paper-card{% if include.compact %} paper-card--compact{% endif %}" data-publication data-topic="{{ paper.topic | escape }}" data-search="{{ paper.title | append: ' ' | append: paper.authors_display | append: ' ' | append: paper.venue_short | append: ' ' | append: paper.topic | strip_html | downcase | escape }}">
+<article class="paper-card{% if include.compact %} paper-card--compact{% endif %}" data-publication data-topic="{{ paper.topic | escape }}" data-search="{{ paper.title | append: ' ' | append: paper.short_name | append: ' ' | append: paper.authors_display | append: ' ' | append: paper.venue_short | append: ' ' | append: paper.topic | strip_html | downcase | escape }}">
 {% if paper.image and include.compact != true %}<a class="paper-thumb" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ paper.image | relative_url }}" alt="" loading="lazy" width="216" height="144"></a>{% endif %}
 <div class="paper-body">
-  <div class="paper-meta"><span class="venue-badge{% if paper.category == 'preprints' %} venue-badge--preprint{% endif %}">{{ paper.venue_short }}</span><span>{{ paper.publication_year }}{% if paper.status == 'Accepted' %} · Accepted{% endif %}</span>{% if paper.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}</div>
+  <div class="paper-meta"><span class="venue-badge{% if paper.category == 'preprints' %} venue-badge--preprint{% endif %}">{{ paper.venue_short }}</span><span>{{ paper.publication_year }}{% if paper.status == 'Accepted' or paper.show_status %} · {{ paper.status }}{% endif %}</span>{% if paper.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}</div>
   <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
   {% include paper-authors.html %}
   <p class="paper-summary">{{ paper.excerpt }}</p>
+  {% if include.contribution %}{% include paper-contribution.html %}{% endif %}
   {% include paper-links.html %}
-  {% if include.citation %}{% include paper-citation.html %}{% endif %}
+  {% if include.citation or include.compact != true %}{% include paper-demo.html compact=true %}{% endif %}
+  {% if include.citation and paper.bibtex %}{% include paper-citation.html %}{% endif %}
 </div></article>

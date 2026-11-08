@@ -1,5 +1,6 @@
 ---
 short_name: InternW0-Δ
+personal_contribution: I contributed targeted post-training and tuning.
 arxiv: '2609.31394'
 date: '2026-09-25'
 publication_year: 2026
@@ -71,15 +72,18 @@ authors:
 paperurl: https://arxiv.org/abs/2609.31394
 sourceurl: https://arxiv.org/abs/2609.31394
 authors_display: Xingyu Miao, Zizun Li, …, Yifei Yao, …, Chunhua Shen
+bibtex_source: https://arxiv.org/bibtex/2609.31394
+bibtex_source_label: arXiv export
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @misc{yao2026internw0delta,
+  @misc{miao2026internw0deltaworldactionmodel,
     title = {InternW0-$\Delta$: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data},
-    author = {Miao, Xingyu and Li, Zizun and Fang, Baole and Song, Kaiwen and Wang, Tenghui and Zhang, Hanxue and Wang, Yating and Li, Xudong and He, Yuping and Wei, Xueyuan and Gao, Chao and Yang, Xijie and Xu, Yingxiang and Ren, Kerui and Guo, Wenqi and Zhou, Jianjun and Wang, Xinzhe and Zhao, Weiguang and Yang, Ni and Cai, Zetao and Xue, Yufei and Li, Hengjie and He, Zeyu and Zhou, Yuanzhen and Fu, Rong and Zhang, Jianyang and Cui, Siwei and Huang, Fuxian and Zhou, Yunsong and Gao, Xing and Yao, Yifei and Yu, Qiaojun and Li, Kailin and Zhou, Ming and Huang, Mu and Li, Xinyue and Cui, Wenze and Jiang, Bingqi and Zhu, Xueyue and Dong, Junting and Guo, Haoyu and Lu, Tao and Yu, Mulin and Zhou, Bowen and Zhao, Bin and Xue, Tianfan and Zhang, Weinan and Shen, Chunhua},
+    author = {Xingyu Miao and Zizun Li and Baole Fang and Kaiwen Song and Tenghui Wang and Hanxue Zhang and Yating Wang and Xudong Li and Yuping He and Xueyuan Wei and Chao Gao and Xijie Yang and Yingxiang Xu and Kerui Ren and Wenqi Guo and Jianjun Zhou and Xinzhe Wang and Weiguang Zhao and Ni Yang and Zetao Cai and Yufei Xue and Hengjie Li and Zeyu He and Yuanzhen Zhou and Rong Fu and Jianyang Zhang and Siwei Cui and Fuxian Huang and Yunsong Zhou and Xing Gao and Yifei Yao and Qiaojun Yu and Kailin Li and Ming Zhou and Mu Huang and Xinyue Li and Wenze Cui and Bingqi Jiang and Xueyue Zhu and Junting Dong and Haoyu Guo and Tao Lu and Mulin Yu and Bowen Zhou and Bin Zhao and Tianfan Xue and Weinan Zhang and Chunhua Shen},
     year = {2026},
-    url = {https://arxiv.org/abs/2609.31394},
     eprint = {2609.31394},
     archivePrefix = {arXiv},
-    primaryClass = {cs.RO}
+    primaryClass = {cs.RO},
+    url = {https://arxiv.org/abs/2609.31394}
   }
 ---
 

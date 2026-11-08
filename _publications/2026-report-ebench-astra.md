@@ -2,6 +2,7 @@
 layout: paper
 collection: publications
 short_name: EBench Agent
+personal_contribution: I led the research, implementation, experiments, and writing.
 title: 'Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy'
 authors:
 - Yifei Yao
@@ -46,8 +47,11 @@ image_alt: An EBench gear-installation observation used in the in-context learni
 image_caption: A gear-installation observation from the report’s in-context demonstration gallery.
 image_source: https://internrobotics.github.io/EBench-Astra-Tech-Report/media/icl/install_gear/11_top_frame_000645.png
 excerpt: Evaluating a frontier agent on EBench under direct robot control and with a harness that can invoke post-trained robot policies.
+bibtex_source: https://arxiv.org/bibtex/2610.35832
+bibtex_source_label: arXiv export
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @misc{yao2026ebenchastra,
+  @misc{yao2026profilingfrontieragentebench,
     title = {Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy},
     author = {Yifei Yao and Yude Zou and Guanbo Jiao and Xing Gao and Ning Gao and Yukai Wang and Jiantong Chen and Zihou Zhu and Xinyu Li and Ningyu Yan and Shuai Wang and Jianming Ma and Haoyu Guo and Weinan Zhang and Chunhua Shen},
     year = {2026},

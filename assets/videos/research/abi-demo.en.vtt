@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.675 --> 00:00:02.825
+On its own, this policy fails.
+
+00:00:02.875 --> 00:00:05.400
+It was cloned from reward-free play data.
+
+00:00:05.450 --> 00:00:10.225
+With ABI, the same policy, from the same
+start and with the same random seed,
+
+00:00:10.275 --> 00:00:11.362
+succeeds.
+
+00:00:11.412 --> 00:00:15.150
+ABI only decides which
+action chunk to run next.
+
+00:00:16.675 --> 00:00:19.375
+Here is the same comparison on more tasks,
+
+00:00:19.425 --> 00:00:22.137
+from the same start with the same random seed.
+
+00:00:22.187 --> 00:00:24.975
+On its own, the walker falls and crawls,
+
+00:00:25.025 --> 00:00:27.400
+and the quadruped flips onto its back.
+
+00:00:27.450 --> 00:00:30.463
+With ABI choosing the chunks, both walk.
+
+00:00:30.513 --> 00:00:34.025
+In the maze, only the steered
+policy reaches the goal.

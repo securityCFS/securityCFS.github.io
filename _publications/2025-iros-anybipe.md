@@ -1,5 +1,6 @@
 ---
 short_name: AnyBipe
+personal_contribution: I led the framework design, implementation, experiments, and writing.
 title: 'AnyBipe: An Automated End-to-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models'
 authors:
 - Yifei Yao
@@ -35,16 +36,20 @@ collection: publications
 verified_on: '2026-10-27'
 paperurl: https://arxiv.org/abs/2409.08904
 authors_display: Yifei Yao, Wentao He, Chenyu Gu, Jiaheng Du, Fuwei Tan, Zhen Zhu, Jun-Guo Lu
+bibtex_source: https://api.crossref.org/works/10.1109/IROS60139.2025.11246492
+bibtex_source_label: Crossref DOI metadata
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @inproceedings{yao2025anybipe,
+  @inproceedings{Yao_2025,
     title = {AnyBipe: An Automated End-to-End Framework for Training and Deploying Bipedal Robots Powered by Large Language Models},
-    author = {Yifei Yao and Wentao He and Chenyu Gu and Jiaheng Du and Fuwei Tan and Zhen Zhu and Jun-Guo Lu},
+    url = {http://dx.doi.org/10.1109/IROS60139.2025.11246492},
+    DOI = {10.1109/iros60139.2025.11246492},
+    booktitle = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+    publisher = {IEEE},
+    author = {Yao, Yifei and He, Wentao and Gu, Chenyu and Du, Jiaheng and Tan, Fuwei and Zhu, Zhen and Lu, Jun-Guo},
     year = {2025},
-    url = {https://arxiv.org/abs/2409.08904},
-    booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)},
-    doi = {10.1109/IROS60139.2025.11246492},
-    pages = {14790--14797},
-    publisher = {IEEE}
+    month = Oct,
+    pages = {14790--14797}
   }
 redirect_from:
 - /publication/2025-iros-anybipe.html

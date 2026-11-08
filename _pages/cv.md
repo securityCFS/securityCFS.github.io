@@ -58,7 +58,7 @@ Major GPA: 3.69/4.0 · Outstanding Graduate of Shanghai Jiao Tong University
 <div class="cv-pubs">
 {% for category in site.publication_category %}
 <h3 class="cv-pub-group">{{ category[1].title }}</h3>
-{% for paper in papers %}{% if paper.category == category[0] %}{% include paper-card.html compact=true %}{% endif %}{% endfor %}
+{% for paper in papers %}{% if paper.category == category[0] %}{% include paper-card.html compact=true contribution=true %}{% endif %}{% endfor %}
 {% endfor %}
 </div>
 <div class="cv-content" markdown="1">

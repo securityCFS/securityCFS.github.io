@@ -1,5 +1,6 @@
 ---
 short_name: PICA-WAM
+personal_contribution: I contributed to the method design and technical discussion.
 arxiv: '2610.26813'
 date: '2026-10-19'
 publication_year: 2026
@@ -29,15 +30,18 @@ authors:
 paperurl: https://arxiv.org/abs/2610.26813
 sourceurl: https://arxiv.org/abs/2610.26813
 authors_display: Yude Zou, Yifei Yao, Guanbo Jiao, Jianming Ma, Guanjie Zheng, Xing Gao
+bibtex_source: https://arxiv.org/bibtex/2610.26813
+bibtex_source_label: arXiv export
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @misc{yao2026picawam,
+  @misc{zou2026picawamvisualperturbationinvariance,
     title = {PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models},
-    author = {Zou, Yude and Yao, Yifei and Jiao, Guanbo and Ma, Jianming and Zheng, Guanjie and Gao, Xing},
+    author = {Yude Zou and Yifei Yao and Guanbo Jiao and Jianming Ma and Guanjie Zheng and Xing Gao},
     year = {2026},
-    url = {https://arxiv.org/abs/2610.26813},
     eprint = {2610.26813},
     archivePrefix = {arXiv},
-    primaryClass = {cs.CV}
+    primaryClass = {cs.CV},
+    url = {https://arxiv.org/abs/2610.26813}
   }
 equal_contributors:
 - Yude Zou

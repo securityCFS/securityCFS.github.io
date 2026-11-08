@@ -1,11 +1,12 @@
 ---
 short_name: Length-Adaptive PPO
+personal_contribution: I contributed to the discussion and improvement of the RL approach.
 title: Length-Adaptive PPO-based RLHF for Non-Uniform UAV Control
 authors:
 - Fuwei Tan
 - Zhen Zhu
 - Yifei Yao
-- Qinghao Zhang
+- Qing-Hao Zhang
 - Xiaodong Han
 - Junguo Lu
 date: '2026-01-01'
@@ -22,15 +23,19 @@ permalink: /publication/2026-ssrn-uav-rlhf/
 layout: paper
 collection: publications
 verified_on: '2026-10-27'
-authors_display: Fuwei Tan, Zhen Zhu, Yifei Yao, Qinghao Zhang, Xiaodong Han, Junguo Lu
+authors_display: Fuwei Tan, Zhen Zhu, Yifei Yao, Qing-Hao Zhang, Xiaodong Han, Junguo Lu
+bibtex_source: https://api.crossref.org/works/10.2139/ssrn.6085506
+bibtex_source_label: Crossref DOI metadata
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @misc{yao2026uavrlhf,
+  @misc{Tan_2026,
     title = {Length-Adaptive PPO-based RLHF for Non-Uniform UAV Control},
-    author = {Fuwei Tan and Zhen Zhu and Yifei Yao and Qinghao Zhang and Xiaodong Han and Junguo Lu},
+    url = {http://dx.doi.org/10.2139/ssrn.6085506},
+    DOI = {10.2139/ssrn.6085506},
+    publisher = {Elsevier BV},
+    author = {Tan, Fuwei and Zhu, Zhen and Yao, Yifei and Zhang, Qing-Hao and Han, Xiaodong and Lu, Junguo},
     year = {2026},
-    url = {https://doi.org/10.2139/ssrn.6085506},
-    doi = {10.2139/ssrn.6085506},
-    note = {Preprint}
+    note = {SSRN preprint}
   }
 ---
 

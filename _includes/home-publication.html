@@ -1,15 +1,17 @@
 <article class="home-paper" data-publication>
   {% assign paper_year = paper.publication_year | append: '' %}
-  {% if paper.image %}<div class="home-paper-media">
+  {% assign media_image = paper.home_image | default: paper.image %}
+  {% if media_image %}<div class="home-paper-media">
     <span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>
-    <a class="home-paper-image" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ paper.home_image | default: paper.image | relative_url }}" alt="" loading="lazy" width="192" height="128"></a>
+    <a class="home-paper-image" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ media_image | relative_url }}" alt="" loading="lazy" width="192" height="128"></a>
   </div>{% endif %}
   <div class="home-paper-body">
-    {% unless paper.image %}<span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>{% endunless %}
+    {% unless media_image %}<span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>{% endunless %}
     <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
     {% include paper-authors.html hide_legend=true %}
-    {% if paper.status == 'Accepted' %}<p class="home-paper-status">Accepted</p>{% endif %}
+    {% if paper.status == 'Accepted' or paper.show_status %}<p class="home-paper-status">{{ paper.status }}</p>{% endif %}
     <p class="home-paper-summary">{{ paper.excerpt }}</p>
     {% include paper-links.html buttons=true %}
   </div>
+  {% include paper-demo.html compact=true %}
 </article>

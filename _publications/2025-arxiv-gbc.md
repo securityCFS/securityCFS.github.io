@@ -1,5 +1,6 @@
 ---
 short_name: GBC
+personal_contribution: I led the framework design, implementation, experiments, and writing.
 arxiv: '2508.09960'
 date: '2025-08-13'
 publication_year: 2025
@@ -34,15 +35,18 @@ authors:
 paperurl: https://arxiv.org/abs/2508.09960
 sourceurl: https://arxiv.org/abs/2508.09960
 authors_display: Yifei Yao, Chengyuan Luo, Jiaheng Du, Wentao He, Jun-Guo Lu
+bibtex_source: https://arxiv.org/bibtex/2508.09960
+bibtex_source_label: arXiv export
+bibtex_verified_on: '2026-11-08'
 bibtex: |-
-  @misc{yao2025gbc,
+  @misc{yao2025gbcgeneralizedbehaviorcloningframework,
     title = {GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation},
-    author = {Yao, Yifei and Luo, Chengyuan and Du, Jiaheng and He, Wentao and Lu, Jun-Guo},
+    author = {Yifei Yao and Chengyuan Luo and Jiaheng Du and Wentao He and Jun-Guo Lu},
     year = {2025},
-    url = {https://arxiv.org/abs/2508.09960},
     eprint = {2508.09960},
     archivePrefix = {arXiv},
-    primaryClass = {cs.RO}
+    primaryClass = {cs.RO},
+    url = {https://arxiv.org/abs/2508.09960}
   }
 ---
 

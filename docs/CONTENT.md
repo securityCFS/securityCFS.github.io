@@ -1,20 +1,31 @@
 # Maintaining the academic website
 
+## Publication approval — current owner instruction
+
+On November 8, 2026, the owner reviewed the local refresh and explicitly authorized pushing it after the ABI wording update. This approval covers the reviewed homepage content and demos. Keep future unpublished research changes in local preview until authorized.
+
 The public site uses Jekyll and GitHub Pages. Main pages use `_layouts/academic.html`; individual papers use `_layouts/paper.html`. No external JavaScript libraries or remote fonts are needed by these pages.
 
 ## Add a paper once
 
-Create `_publications/YYYY-venue-short-name.md`, using an existing record as a reference. Required fields are `title`, `short_name`, `authors` (a YAML list in publication order), `authors_display`, `date` (for sorting), `publication_year`, `category`, `venue`, `venue_short`, `status`, `topic`, `excerpt`, `paperurl`, `sourceurl`, `verified_on`, `bibtex`, `layout: paper`, and `permalink`.
+Create `_publications/YYYY-venue-short-name.md`, using an existing record as a reference. Required fields are `title`, `short_name`, `authors` (a YAML list in publication order), `authors_display`, `date` (for sorting), `publication_year`, `category`, `venue`, `venue_short`, `status`, `topic`, `excerpt`, `verified_on`, `layout: paper`, and `permalink`. Add `paperurl`, `sourceurl`, and `bibtex` when a public paper and complete citation are available; omit them for pending manuscripts.
 
-- Categories: `conferences`, `preprints`, `reports`.
-- Topics: `Humanoid control`, `Embodied agents`, `World action models`, `UAV control`. If adding a topic, also add a filter button in `_pages/publications.html`.
+- Categories: `conferences`, `preprints`, `reports`, `ongoing` (Work in Progress).
+- Topics: `Humanoid control`, `Offline RL`, `Embodied agents`, `World action models`, `UAV control`. If adding a topic, also add a filter button in `_pages/publications.html`.
 - The homepage lists every publication in reverse date order. `selected` and `selected_order` still control the separate legacy project listing.
 - Use `projecturl`, `codeurl`, `docsurl`, `slidesurl`, and `publisherurl` only for verified, available resources. Unreleased code should not have a dead Code button.
 - Keep preprint and conference versions in one record, linking both versions and using the final published title and year.
 - For long author lists, shorten only `authors_display`; preserve every author in `authors` and BibTeX. Use `equal_contributors` (a list of exact author names) for verified shared first authorship. Cards and paper detail pages render stars, an equal-contribution legend, and a co-first-author badge for Yifei Yao. Keep BibTeX names free of presentation markers. Do not infer equal contribution.
 - Month-only dates use the first day for sorting (InfCoiL: September 2026; UAV preprint: January 2026). The UI displays the verified year or month, not these sorting days.
+- Use `personal_contribution` only for an owner-confirmed account of their role. Display it only in CV cards via `contribution=true`; omit it from the homepage, Publications, portfolio and paper detail pages.
+- ABI remains a demo-first preview until the paper release. Keep method diagrams, technical explanations and draft benchmark tables out of the served site. Retain detailed drafts and unused media under ignored `local/homepage-intake/` for later review.
+- Set `show_status: true` to display a pending manuscript's exact status on cards. When a full author list is not settled, use `authors_note` to make this explicit. Do not export a citation with an incomplete author list.
+- Ongoing projects without a settled paper author list may omit `authors` and `authors_display`; do not turn an owner role into a fabricated publication author list. ARIEL is such a project.
+- Citation provenance uses `bibtex_source`, `bibtex_source_label`, and `bibtex_verified_on`. Prefer an actual source export. Keep pending export status explicit, and do not describe metadata-derived citations as Scholar exports.
 
 New records automatically appear on the homepage, Publications, CV, and the downloadable `/files/publications.bib`. Selected records also appear in the legacy project listing.
+
+Records without a BibTeX entry do not contribute a citation to the download. A pending manuscript can appear on the site before a public paper URL exists.
 
 ## News and personal information
 
@@ -84,3 +95,34 @@ Do not invent research outcomes, personal contribution statements, or extra sect
 Google Scholar rate-limited automated access during this check, so the current Scholar list could not be independently read in full. The owner's interests now include offline and agentic reinforcement learning, as explicitly requested; they are presented as interests rather than claims of published results.
 
 The EBench project is listed once, with the title, author order, and date of its [arXiv report](https://arxiv.org/abs/2610.35832) (October 26, 2026). Its first three authors share equal contribution. Its [project page](https://internrobotics.github.io/EBench-Astra-Tech-Report/) retains the earlier web report's title and author order; it is linked as a project rather than entered as a second publication. No unrelated same-name authors were added.
+
+## New work and personal contributions, November 8, 2026
+
+ABI and SimplEvo were checked against the owner's latest manuscripts. The owner confirmed ABI is in preparation, with Yifei Yao as first author and the remaining author list unsettled; all work so far is his. SimplEvo is awaiting arXiv release. Its manuscript lists Yifei Yao and Yude Zou as equal contributors; Yifei confirmed his role as experiment design, framework improvement, and results discussion. No roles of other authors are described on the site.
+
+The November 1 dates on these records are month-level sorting dates for their November homepage introduction, not claimed publication dates. No arXiv ID, acceptance, complete ABI author list, or public paper download has been inferred. Figures come from the owner-provided manuscripts; their provenance is retained in ignored local intake notes. Add verified public paper links and complete citations when the papers are released. Recheck ABI authors before creating its citation.
+
+## ARIEL and citation audit, November 8, 2026
+
+ARIEL is included as an ongoing research project, using the title and technical description in its README. It continues the owner's GBC-based humanoid-control work with in-context execution memory and sparse velocity/heading commands. The homepage introduction links this continuing research line. No author list, publication venue, public repository, or citation is asserted.
+
+Scholar blocked access during the requested re-export. Eight citations were instead re-imported from first-party exports: five from arXiv, REAL from its official project page, and AnyBipe/UAV from Crossref DOI metadata. Source links appear inside the BibTeX disclosure. InfCoiL metadata was rechecked on the NeurIPS page, but its OpenReview export is still unavailable; its citation explicitly says export pending. Raw responses and audit notes remain in ignored local files.
+
+The imported AnyBipe page range uses BibTeX's `--` separator. UAV uses `@misc` with `SSRN preprint` because the Crossref JSON record is `posted-content`/`preprint`, despite its generic export's journal-less `@article`; its author spelling is corrected to Qing-Hao Zhang. No missing journal, proceedings volume, or other publication field has been invented. These changes remain local pending owner review.
+
+The owner subsequently confirmed older-paper roles for the local draft: REAL (RL environments, reward design, RL training, task-trajectory design and annotation); InfCoiL (SFPO for the flow-matching controller, stable RL training, and plateau-triggered coordinated training on both sides); PICA-WAM (contribution to method design and discussion); InternW0 and InternW0-Delta (targeted post-training and tuning); UAV (discussion and improvement of the RL approach). The owner described the remaining EBench, GBC, and AnyBipe work as largely carried out independently; the draft says he led the work without claiming sole authorship. All new contribution prose awaits owner review.
+
+
+## Research narratives and demonstrations, November 8, 2026
+
+The owner reviewed the research introductions and demonstrations. Keep ongoing work labeled in preparation, with no unconfirmed venue or release claims. Private evidence notes are excluded from both the site and Git.
+
+ARIEL leads with three agent-facing capabilities: choosing a behavior, steering with simple commands, and maintaining control between decisions. Internal controller identifiers must not appear in public text, videos, posters, metadata or this repository. Historical deployment comparisons stay in a collapsed note with their original measurement scope; do not present them as measurements of the current controller or as a scaling law.
+
+ABI's public introduction states that, given an existing policy, it trains a reusable guide to improve deployment-time execution without parameter updates or task-specific policy post-training. Detailed principles, method figures and draft benchmark tables remain private until the paper release. Development videos are illustrative, not the newest benchmark rows.
+
+InfCoiL's official project page is now available. Its citation replaces the earlier export-pending record, and its current paper names SFPO as Semantic Flow Policy Optimization for the planner. This resolves the older terminology and planner/controller ambiguity above.
+
+Optional `videos` entries have `title`, `src`, `poster`, `width`, `height`, `caption` and optional `source` or `captions` (WebVTT). `_includes/paper-demo.html` renders click-to-expand players on the homepage/archive and a gallery on paper pages. Use native controls, `preload="none"`, no autoplay; pause when collapsed, another clip starts or the tab becomes hidden. Do not insert players in the CV. `home_image` can provide a video poster thumbnail without adding a duplicate figure to the detail page.
+
+Five clips cover an ARIEL memory-replay montage and continuous control, an ABI task-demo edit, and InfCoiL object transport. Preserve captions distinguishing recorded trajectories, edited speeds, diagnostic examples and display smoothing. Exact provenance and transformations are in ignored local intake notes; do not publish private paths or checkpoints.

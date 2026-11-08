@@ -56,7 +56,7 @@
       document.querySelectorAll('[data-publication-group]').forEach(group => {
         group.hidden = ![...group.querySelectorAll('[data-publication]')].some(card => !card.hidden);
       });
-      tools.querySelector('[data-filter-status]').textContent = `${count} publication${count === 1 ? '' : 's'}`;
+      tools.querySelector('[data-filter-status]').textContent = `${count} research work${count === 1 ? '' : 's'}`;
       document.querySelector('[data-empty-state]').hidden = count !== 0;
     };
     input.addEventListener('input', update);
@@ -89,5 +89,17 @@
   document.querySelectorAll('[data-print-cv]').forEach(button => {
     button.hidden = false;
     button.addEventListener('click', () => window.print());
+  });
+  const demoVideos = [...document.querySelectorAll('.research-video video')];
+  demoVideos.forEach(video => video.addEventListener('play', () => {
+    demoVideos.forEach(other => { if (other !== video) other.pause(); });
+  }));
+  document.querySelectorAll('.paper-demo').forEach(details => {
+    details.addEventListener('toggle', () => {
+      if (!details.open) details.querySelectorAll('video').forEach(video => video.pause());
+    });
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) demoVideos.forEach(video => video.pause());
   });
 })();

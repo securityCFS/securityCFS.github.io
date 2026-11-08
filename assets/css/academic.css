@@ -885,9 +885,24 @@ main:focus{
 .equal-marker { color: var(--accent); font-size: .8em; line-height: 0; vertical-align: super; }
 .paper-authors .contribution-note { font-size: 10px; color: var(--muted); margin: 1px 0 9px; }
 .contribution-badge { color: #78591f; background: #f2ecd9; border-radius: 3px; padding: 3px 7px; font-size: 10px; font-weight: 600; }
+.paper-contribution { font-size: 12px; line-height: 1.65; margin: 0 0 10px; color: var(--ink); }
+.paper-contribution strong { font-weight: 600; }
+.paper-authors .authorship-note { font-size: 11px; color: var(--muted); margin: 0 0 7px; }
 
 .honors-list { list-style: none; padding: 0; margin: 0; }
 .honors-list li { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 18px; padding: 9px 0; font-size: 13px; }
 .honor-year { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 .honor-institution { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
 .cv-honors-list li { margin-bottom: 10px; }
+
+.paper-demo { margin: 14px 0 0; }
+.paper-demo > summary { width: fit-content; cursor: pointer; color: var(--accent); font-size: 12px; font-weight: 600; padding: 5px 0; }
+.paper-demo > summary span { font-size: 10px; margin-left: 4px; }
+.research-video { margin: 16px 0 24px; }
+.research-video h3 { font-size: 15px; margin: 0 0 10px; }
+.research-video video { display: block; width: 100%; height: auto; max-height: 560px; background: #111820; border: 1px solid var(--line); border-radius: 4px; }
+.research-video figcaption { font-size: 12px; line-height: 1.65; color: var(--muted); margin-top: 9px; }
+.paper-demo .research-video h3 { font-size: 12px; }
+.paper-demo .research-video figcaption { font-size: 11px; }
+.paper-demo-gallery { margin: 30px 0; }
+@media print { .paper-demo, .paper-demo-gallery { display: none; } }
