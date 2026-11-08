@@ -4,17 +4,21 @@ The public site uses Jekyll and GitHub Pages. Main pages use `_layouts/academic.
 
 ## Add a paper once
 
-Create `_publications/YYYY-venue-short-name.md`, using an existing record as a reference. Required fields are `title`, `short_name`, `authors` (a YAML list in publication order), `authors_display`, `date` (for sorting), `publication_year`, `category`, `venue`, `venue_short`, `status`, `topic`, `excerpt`, `paperurl`, `sourceurl`, `verified_on`, `bibtex`, `layout: paper`, and `permalink`.
+Create `_publications/YYYY-venue-short-name.md`, using an existing record as a reference. Required fields are `title`, `short_name`, `authors` (a YAML list in publication order), `authors_display`, `date` (for sorting), `publication_year`, `category`, `venue`, `venue_short`, `status`, `topic`, `excerpt`, `verified_on`, `layout: paper`, and `permalink`. Add `paperurl`, `sourceurl`, and `bibtex` when a public paper and complete citation are available; omit them for pending manuscripts.
 
-- Categories: `conferences`, `preprints`, `reports`.
-- Topics: `Humanoid control`, `Embodied agents`, `World action models`, `UAV control`. If adding a topic, also add a filter button in `_pages/publications.html`.
+- Categories: `conferences`, `preprints`, `reports`, `ongoing` (Work in Progress).
+- Topics: `Humanoid control`, `Offline RL`, `Embodied agents`, `World action models`, `UAV control`. If adding a topic, also add a filter button in `_pages/publications.html`.
 - The homepage lists every publication in reverse date order. `selected` and `selected_order` still control the separate legacy project listing.
 - Use `projecturl`, `codeurl`, `docsurl`, `slidesurl`, and `publisherurl` only for verified, available resources. Unreleased code should not have a dead Code button.
 - Keep preprint and conference versions in one record, linking both versions and using the final published title and year.
 - For long author lists, shorten only `authors_display`; preserve every author in `authors` and BibTeX. Use `equal_contributors` (a list of exact author names) for verified shared first authorship. Cards and paper detail pages render stars, an equal-contribution legend, and a co-first-author badge for Yifei Yao. Keep BibTeX names free of presentation markers. Do not infer equal contribution.
 - Month-only dates use the first day for sorting (InfCoiL: September 2026; UAV preprint: January 2026). The UI displays the verified year or month, not these sorting days.
+- Use `personal_contribution` only for an owner-confirmed account of their role. The same text appears on the homepage, Publications, CV, and paper detail page; the field is optional and absent fields produce no placeholder.
+- Set `show_status: true` to display a pending manuscript's exact status on cards. When a full author list is not settled, use `authors_note` to make this explicit. Do not export a citation with an incomplete author list.
 
 New records automatically appear on the homepage, Publications, CV, and the downloadable `/files/publications.bib`. Selected records also appear in the legacy project listing.
+
+Records without a BibTeX entry do not contribute a citation to the download. A pending manuscript can appear on the site before a public paper URL exists.
 
 ## News and personal information
 
@@ -84,3 +88,9 @@ Do not invent research outcomes, personal contribution statements, or extra sect
 Google Scholar rate-limited automated access during this check, so the current Scholar list could not be independently read in full. The owner's interests now include offline and agentic reinforcement learning, as explicitly requested; they are presented as interests rather than claims of published results.
 
 The EBench project is listed once, with the title, author order, and date of its [arXiv report](https://arxiv.org/abs/2610.35832) (October 26, 2026). Its first three authors share equal contribution. Its [project page](https://internrobotics.github.io/EBench-Astra-Tech-Report/) retains the earlier web report's title and author order; it is linked as a project rather than entered as a second publication. No unrelated same-name authors were added.
+
+## New work and personal contributions, November 8, 2026
+
+ABI and SimplEvo were checked against the owner's latest manuscripts. The owner confirmed ABI is in preparation, with Yifei Yao as first author and the remaining author list unsettled; all work so far is his. SimplEvo is awaiting arXiv release. Its manuscript lists Yifei Yao and Yude Zou as equal contributors; Yifei confirmed his role as experiment design, framework improvement, and results discussion. No roles of other authors are described on the site.
+
+The November 1 dates on these records are month-level sorting dates for their November homepage introduction, not claimed publication dates. No arXiv ID, acceptance, complete ABI author list, or public paper download has been inferred. Figures come from the owner-provided manuscripts; their provenance is retained in ignored local intake notes. Add verified public paper links and complete citations when the papers are released. Recheck ABI authors before creating its citation. Contributions for older papers remain absent until individually confirmed.
