@@ -23,8 +23,13 @@ redirect_from:
 </section>
 
 <section class="home-publications" id="research" aria-labelledby="research-title">
-  <div class="section-heading"><h2 id="research-title">Research</h2><a href="{{ '/publications/' | relative_url }}">Publications &amp; citations ↗</a></div>
+  <div class="section-heading"><h2 id="research-title">Publications</h2><a href="{{ '/publications/' | relative_url }}">Full records &amp; citations ↗</a></div>
   <p class="equal-note">* Equal contribution (co-first authors).</p>
   {% assign papers = site.publications | sort: 'date' | reverse %}
-  {% for paper in papers %}{% include home-publication.html %}{% endfor %}
+  {% for paper in papers %}{% unless paper.category == 'ongoing' %}{% include home-publication.html %}{% endunless %}{% endfor %}
+</section>
+
+<section class="home-publications" id="ongoing-research" aria-labelledby="ongoing-title">
+  <div class="section-heading"><h2 id="ongoing-title">Ongoing Research</h2></div>
+  {% for paper in papers %}{% if paper.category == 'ongoing' %}{% include home-publication.html %}{% endif %}{% endfor %}
 </section>

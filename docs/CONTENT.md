@@ -12,9 +12,9 @@ The public site uses Jekyll and GitHub Pages. Main pages use `_layouts/academic.
 
 Create `_publications/YYYY-venue-short-name.md`, using an existing record as a reference. Required fields are `title`, `short_name`, `authors` (a YAML list in publication order), `authors_display`, `date` (for sorting), `publication_year`, `category`, `venue`, `venue_short`, `status`, `topic`, `excerpt`, `verified_on`, `layout: paper`, and `permalink`. Add `paperurl`, `sourceurl`, and `bibtex` when a public paper and complete citation are available; omit them for pending manuscripts.
 
-- Categories: `conferences`, `preprints`, `reports`, `ongoing` (Work in Progress).
+- Categories: `conferences`, `preprints`, `reports`, `ongoing` (Ongoing Research). Manuscripts awaiting their first public release belong to `ongoing`; move them to `preprints` once released.
 - Topics: `Humanoid control`, `Offline RL`, `Embodied agents`, `World action models`, `UAV control`. If adding a topic, also add a filter button in `_pages/publications.html`.
-- The homepage lists every publication in reverse date order. `selected` and `selected_order` still control the separate legacy project listing.
+- The homepage lists all released/accepted work under Publications, followed by a separate Ongoing Research section. Each section uses reverse date order. `selected` and `selected_order` still control the separate legacy project listing.
 - Use `projecturl`, `codeurl`, `docsurl`, `slidesurl`, and `publisherurl` only for verified, available resources. Unreleased code should not have a dead Code button.
 - Keep preprint and conference versions in one record, linking both versions and using the final published title and year.
 - For long author lists, shorten only `authors_display`; preserve every author in `authors` and BibTeX. Use `equal_contributors` (a list of exact author names) for verified shared first authorship. Cards and paper detail pages render stars, an equal-contribution legend, and a co-first-author badge for Yifei Yao. Keep BibTeX names free of presentation markers. Do not infer equal contribution.

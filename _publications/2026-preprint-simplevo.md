@@ -20,7 +20,7 @@ contribution_source: Owner-confirmed manuscript author block
 date: '2026-11-01'
 date_precision: month
 publication_year: 2026
-category: preprints
+category: ongoing
 venue: Preprint awaiting arXiv release
 venue_short: Preprint
 status: arXiv release pending
