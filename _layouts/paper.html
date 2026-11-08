@@ -6,11 +6,9 @@ layout: academic
 {% include paper-authors.html full=true %}
 {% include paper-links.html %}
 <p class="paper-lead">{{ page.excerpt }}</p>
-{% include paper-contribution.html full=true %}
 {% if page.image %}<figure class="paper-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{{ page.image_caption }}</figcaption></figure>{% endif %}
 {{ content }}
-{% if page.bibtex %}<h2>Reference</h2>
+<h2>Reference</h2>
 {% include paper-citation.html %}
-{% endif %}
-{% if page.sourceurl %}<p class="muted">Metadata checked {{ page.verified_on | date: '%B %d, %Y' }}. <a href="{{ page.sourceurl }}">Original source ↗</a></p>{% endif %}
+<p class="muted">Metadata checked {{ page.verified_on | date: '%B %d, %Y' }}. <a href="{{ page.sourceurl }}">Original source ↗</a></p>
 <p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>

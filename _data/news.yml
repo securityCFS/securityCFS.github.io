@@ -1,6 +1,3 @@
-- date: "2026-11-08"
-  label: "Nov 2026"
-  text: "New work: [ABI](/publication/2026-manuscript-abi/) on actor-free zero-shot RL (manuscript in preparation), and [SimplEvo](/publication/2026-preprint-simplevo/) on memory evolution for embodied agents (arXiv release pending)."
 - date: "2026-10-26"
   label: "Oct 2026"
   text: "Our [EBench report](https://arxiv.org/abs/2610.35832) is on arXiv, studying direct robot control and an agent harness with post-trained policies."

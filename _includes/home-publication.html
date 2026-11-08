@@ -8,9 +8,8 @@
     {% unless paper.image %}<span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>{% endunless %}
     <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
     {% include paper-authors.html hide_legend=true %}
-    {% if paper.status == 'Accepted' or paper.show_status %}<p class="home-paper-status">{{ paper.status }}</p>{% endif %}
+    {% if paper.status == 'Accepted' %}<p class="home-paper-status">Accepted</p>{% endif %}
     <p class="home-paper-summary">{{ paper.excerpt }}</p>
-    {% include paper-contribution.html %}
     {% include paper-links.html buttons=true %}
   </div>
 </article>

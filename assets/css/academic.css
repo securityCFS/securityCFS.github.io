@@ -885,9 +885,6 @@ main:focus{
 .equal-marker { color: var(--accent); font-size: .8em; line-height: 0; vertical-align: super; }
 .paper-authors .contribution-note { font-size: 10px; color: var(--muted); margin: 1px 0 9px; }
 .contribution-badge { color: #78591f; background: #f2ecd9; border-radius: 3px; padding: 3px 7px; font-size: 10px; font-weight: 600; }
-.paper-contribution { font-size: 12px; line-height: 1.65; margin: 0 0 10px; color: var(--ink); }
-.paper-contribution strong { font-weight: 600; }
-.paper-authors .authorship-note { font-size: 11px; color: var(--muted); margin: 0 0 7px; }
 
 .honors-list { list-style: none; padding: 0; margin: 0; }
 .honors-list li { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 18px; padding: 9px 0; font-size: 13px; }

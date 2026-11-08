@@ -1,4 +1,0 @@
-{% if paper.personal_contribution %}
-{% if include.full %}<section class="paper-contribution-detail" aria-labelledby="contribution-title"><h2 id="contribution-title">My contribution</h2><p>{{ paper.personal_contribution | escape }}</p></section>
-{% else %}<p class="paper-contribution"><strong>My contribution:</strong> {{ paper.personal_contribution | escape }}</p>{% endif %}
-{% endif %}
