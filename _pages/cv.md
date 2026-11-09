@@ -32,8 +32,8 @@ Major GPA: 3.69/4.0 · Outstanding Graduate of Shanghai Jiao Tong University
 - Research in reinforcement learning, embodied agents, and robotic manipulation.
 - Shared first author of REAL (ECCV 2026), InfCoiL (NeurIPS 2026), PICA-WAM, and the EBench frontier-agent evaluation report; coauthor of the InternW0 series of technical reports.
 
-### Turin Robotics / Shanghai Baosight Software <span class="cv-date">Jan 2025 – Jul 2025</span>
-**Reinforcement Learning Algorithm Engineer**
+### Turin Robotics / Shanghai Baosight Software <span class="cv-date">Oct 2024 – Oct 2025</span>
+**Project collaboration**
 
 - Developed reinforcement learning and imitation learning algorithms for humanoid robots.
 
