@@ -1,0 +1,22 @@
+<details class="paper-demo abi-playground" data-abi-playground{% unless include.compact %} open{% endunless %}>
+  <summary>Interactive playground</summary>
+  <div id="abi-demo" class="abi-scene-picker">
+    <p>Choose a scene to run in your browser. The green robot uses ABI guidance. The gray robot runs the same frozen policy without it.</p>
+    <ul class="abi-scenes">
+      {% for scene in paper.playground_scenes %}
+      <li><a href="{{ paper.playgroundurl }}?env={{ scene.id | escape }}" data-abi-scene="{{ scene.title | escape }}">
+        <img src="{{ paper.projecturl }}assets/{{ scene.thumbnail | escape }}" loading="lazy" width="640" height="400" alt="">
+        <span>{{ scene.title }}</span><small>{{ scene.suite }}</small>
+      </a></li>
+      {% endfor %}
+    </ul>
+    {% include abi-replay.html %}
+  </div>
+  <dialog class="abi-live" aria-label="ABI interactive playground">
+    <div class="abi-live-bar">
+      <a data-abi-full href="{{ paper.playgroundurl }}" target="_blank" rel="noopener noreferrer">Open full page</a>
+      <button type="button" data-abi-close autofocus>Close playground</button>
+    </div>
+    <div class="abi-live-stage"></div>
+  </dialog>
+</details>

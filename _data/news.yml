@@ -3,7 +3,7 @@
   text: "I released [SCOPE v0.2.0](https://github.com/securityCFS/SCOPE/releases/tag/v0.2.0), the open-source workbench I use to follow coding sessions and GPU jobs across machines."
 - date: "2026-11-23"
   label: "Nov 2026"
-  text: "[ABI is on arXiv](https://arxiv.org/abs/2611.30636). Pick a goal in the [AntMaze demo](#abi-demo) or run the policy yourself in the [Playground](https://securitycfs.github.io/ABI-demo/playground/)."
+  text: "[ABI is on arXiv](https://arxiv.org/abs/2611.30636). Watch the [project video](https://securitycfs.github.io/ABI-demo/#video) or choose a robot to control in the [interactive playground](#abi-demo)."
 - date: "2026-11-08"
   label: "Nov 2026"
   text: "Our [SimplEvo preprint](https://arxiv.org/abs/2611.11509) and [code](https://github.com/securityCFS/SimplEvo-base) are public. The repo includes a small tabletop task for trying out memory refinement."

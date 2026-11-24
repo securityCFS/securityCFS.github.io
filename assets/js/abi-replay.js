@@ -1,6 +1,7 @@
 // Display paired XY traces recorded with the public ABI Playground worker.
 function prepareMaze(canvas, data) {
   const ctx = canvas.getContext('2d');
+  const palette = getComputedStyle(canvas);
   const margin = 0.65;
   const scale = canvas.width / (data.maze[0].length - 2 * margin);
   const toGrid = ([x, y]) => [
@@ -42,8 +43,8 @@ function prepareMaze(canvas, data) {
     data.maze.forEach((row, y) => row.forEach((wall, x) => {
       if (wall) ctx.fillRect(x, y, 1.005, 1.005);
     }));
-    trail(baseline, step, '#925432', true);
-    trail(paths[runIndex], step, '#206293', false);
+    trail(baseline, step, palette.getPropertyValue('--base').trim(), true);
+    trail(paths[runIndex], step, palette.getPropertyValue('--guided').trim(), false);
 
     ctx.lineWidth = 0.055;
     ctx.strokeStyle = '#273a4a';
@@ -92,8 +93,8 @@ function showReplay(panel, data) {
     stepLabel.textContent = step + ' / ' + limit;
     slider.value = step;
     slider.setAttribute('aria-valuetext', 'Step ' + step + ' of ' + limit);
-    canvas.setAttribute('aria-label', run.label + ' goal at step ' + step + '. With ABI: ' +
-      guided.textContent + '. Base policy: ' + base.textContent + '.');
+    canvas.setAttribute('aria-label', run.label + ' goal at step ' + step + '. ABI-guided: ' +
+      guided.textContent + '. Unguided: ' + base.textContent + '.');
     play.textContent = playing ? 'Pause' : step === limit ? 'Replay' : 'Play';
   }
 
@@ -121,6 +122,11 @@ function showReplay(panel, data) {
   goal.addEventListener('change', pause);
   slider.addEventListener('input', () => { step = Number(slider.value); pause(); });
   panel.addEventListener('toggle', () => { if (!panel.open) pause(); });
+  const launcher = panel.closest('[data-abi-playground]');
+  launcher?.addEventListener('toggle', () => { if (!launcher.open && playing) pause(); });
+  launcher?.addEventListener('click', event => {
+    if (playing && event.target.closest('[data-abi-scene]')) pause();
+  });
   document.addEventListener('visibilitychange', () => { if (document.hidden && playing) pause(); });
   drawFrame();
   panel.querySelector('.abi-interactive').hidden = false;
@@ -148,7 +154,7 @@ for (const panel of document.querySelectorAll('[data-abi-tracks]')) {
     }
   }
   function openLinkedDemo() {
-    if (location.hash === '#abi-demo') panel.open = true;
+    if (location.hash === '#abi-antmaze-replay') panel.open = true;
   }
   window.addEventListener('hashchange', openLinkedDemo);
   panel.addEventListener('toggle', loadWhenOpen);

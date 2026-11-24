@@ -11,6 +11,11 @@ authors:
   - Xing Gao
   - Chunhua Shen
 authors_display: Yifei Yao, Yude Zou, Guanbo Jiao, Jianming Ma, Xing Gao, Chunhua Shen
+equal_contributors:
+  - Yifei Yao
+  - Yude Zou
+  - Guanbo Jiao
+contribution_source: Equal-contribution footnote on the first page of the arXiv paper and on the project page
 arxiv: '2611.30636'
 date: '2026-11-23'
 publication_year: 2026
@@ -26,8 +31,13 @@ paper_label: arXiv
 sourceurl: https://arxiv.org/abs/2611.30636
 projecturl: https://securitycfs.github.io/ABI-demo/
 playgroundurl: https://securitycfs.github.io/ABI-demo/playground/
-minidemo: antmaze
-home_image: /assets/images/research/abi-demo.jpg
+playground_scenes:
+  - { id: cube-single-play, title: Cube, suite: OGBench, thumbnail: thumb_cube.jpg }
+  - { id: antmaze-medium-navigate, title: AntMaze, suite: OGBench, thumbnail: thumb_antmaze.jpg }
+  - { id: dmc-quadruped, title: Quadruped, suite: DeepMind Control, thumbnail: thumb_quadruped.jpg }
+  - { id: dmc-cheetah, title: Cheetah, suite: DeepMind Control, thumbnail: thumb_cheetah.jpg }
+  - { id: dmc-walker, title: Walker, suite: DeepMind Control, thumbnail: thumb_walker.jpg }
+home_image: https://securitycfs.github.io/ABI-demo/assets/abi_video_poster.jpg
 excerpt: ABI trains a guide on unlabeled trajectories. Give it a new goal at deployment and it steers the actions of an existing policy while the policy’s weights stay frozen.
 personal_contribution: I formulated the research problem, developed the method and theoretical analysis, implemented the system, designed and ran the experiments, and wrote the manuscript.
 bibtex_source: https://arxiv.org/bibtex/2611.30636
@@ -43,12 +53,13 @@ bibtex: |-
     primaryClass = {cs.RO},
     url = {https://arxiv.org/abs/2611.30636}
   }
+video_label: Project video
 videos:
-  - title: Same policy, with and without ABI
-    src: /assets/videos/research/abi-demo.mp4
-    poster: /assets/images/research/abi-demo.jpg
+  - title: How ABI guides a frozen policy
+    src: https://securitycfs.github.io/ABI-demo/assets/abi_video.mp4
+    poster: https://securitycfs.github.io/ABI-demo/assets/abi_video_poster.jpg
     width: 1920
     height: 1080
-    captions: /assets/videos/research/abi-demo.en.vtt
-    caption: 'Manipulation, locomotion and navigation excerpts from the project video. Each pair uses the same starting state, random seed and frozen base policy. Selected simulation examples with edited playback speeds; on-screen scores describe these development episodes.'
+    source: https://securitycfs.github.io/ABI-demo/#video
+    caption: Narrated project video with captions. The green robot uses ABI guidance. The gray robot runs the same frozen policy from the same starting state.
 ---

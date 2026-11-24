@@ -1,5 +1,5 @@
 {% if paper.videos %}
-{% if include.compact %}<details class="paper-demo"><summary>Watch {% if paper.videos.size == 1 %}demo{% else %}demos{% endif %}</summary>{% else %}<section class="paper-demo-gallery" aria-label="{{ paper.short_name | escape }} demonstrations"><h2>{% if paper.videos.size == 1 %}Demo{% else %}Demos{% endif %}</h2>{% endif %}
+{% if include.compact %}<details class="paper-demo"><summary>Watch {% if paper.video_label %}{{ paper.video_label | downcase }}{% elsif paper.videos.size == 1 %}demo{% else %}demos{% endif %}</summary>{% else %}<section class="paper-demo-gallery" aria-label="{{ paper.short_name | escape }} demonstrations"><h2>{% if paper.video_label %}{{ paper.video_label }}{% elsif paper.videos.size == 1 %}Demo{% else %}Demos{% endif %}</h2>{% endif %}
 {% for video in paper.videos %}
 <figure class="research-video">
   <h3>{{ video.title }}</h3>
