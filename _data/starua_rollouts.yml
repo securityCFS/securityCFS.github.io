@@ -1,0 +1,36 @@
+- title: "Finding the cookie again"
+  description: "The EBench task involves standing the purple cup upright and picking up a cookie. The two wrist views are brightened for visibility."
+  frames:
+    - image: cookie-plate.webp
+      width: 384
+      height: 288
+      alt: "Wrist view of the gripper at the rim of a tilted plate holding several cookies."
+      caption: "The gripper catches the rim and lifts the plate."
+    - image: cookie-reach.webp
+      width: 384
+      height: 288
+      alt: "A single loose cookie on the wooden surface between the open fingers."
+      caption: "The fingers approach the loose cookie at its new position."
+    - image: cookie-finish.webp
+      width: 640
+      height: 360
+      alt: "Overhead view at the end of the episode, with cookies in a dark container and the purple cup upright."
+      caption: "The overhead view at completion. This episode took 44 tool calls."
+- title: "A green toy where the demonstration showed a dish"
+  description: "The RoboDojo pickup policy starts with fixed notes from a demonstration. In this episode, it has to use the live camera view to locate a different object on the conveyor."
+  frames:
+    - image: toy-demonstration.webp
+      width: 640
+      height: 480
+      alt: "The demonstration camera shows a white patterned dish alongside the gripper."
+      caption: "The reference demonstration features a patterned dish."
+    - image: toy-start.webp
+      width: 640
+      height: 480
+      alt: "Two open robot hands face a small green toy on the right side of the conveyor."
+      caption: "At the start of the new episode, the agent identifies the green toy."
+    - image: toy-grasp.webp
+      width: 384
+      height: 288
+      alt: "Close wrist-camera view of the green toy held between the gripper fingers."
+      caption: "The agent checks the lift through its wrist camera. The pickup takes nine tool calls."

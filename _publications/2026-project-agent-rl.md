@@ -1,8 +1,8 @@
 ---
 layout: paper
 collection: publications
-title: 'Learning Embodied Agents from Experience'
-short_name: Embodied Agent RL
+title: 'StaRUA: Aligning Spatial Intent with Physical Action in Open-Weight Robot-Use Agents'
+short_name: StaRUA
 date: '2026-11-08'
 publication_year: 2026
 category: ongoing
@@ -12,14 +12,12 @@ status: In progress
 show_status: true
 topic: Embodied agents
 permalink: /publication/2026-project-agent-rl/
-verified_on: '2026-11-08'
-home_image: /assets/images/research/agent-rl/vqa-overlook.png
+verified_on: '2026-11-24'
+home_image: /assets/images/research/starua/cookie-plate.webp
 demourl: /publication/2026-project-agent-rl/#examples
-excerpt: 'How can an open model learn to act from a frontier agent’s experience? I am studying the transfer of Astra’s robot interaction experience to Qwen3.8-27B through staged SFT and reinforcement learning, connecting visual grounding, short manipulation skills, and long-horizon tasks.'
+excerpt: 'StaRUA trains Qwen3.8-27B to control a robot from its overhead and wrist cameras. In one kitchen simulation, the gripper lifts a plate by mistake. The agent looks again, finds the cookie that slid off, and lines up another reach.'
 ---
 
-Building on [EBench](/publication/2026-report-ebench-astra/) and [SimplEvo](/publication/2026-preprint-simplevo/), this project studies how experience collected through interaction can become a student model’s own ability to observe, act, and correct mistakes.
-
-Multi-stage SFT and embodied VQA RL experiments are underway. Short-skill rollout and scoring have passed initial smoke tests; their training benefit and transfer to long-horizon tasks remain under investigation.
+StaRUA stands for *Staged Robot-Use Agent*. I start with Astra’s manipulation demonstrations from [SimplEvo](/publication/2026-preprint-simplevo/) and let the policy practise in simulation. At each turn it can request an overhead view or either wrist camera, send waypoints to an arm, or open and close a gripper. The measured finger opening and the next camera view help it check what it actually picked up. I study these decisions in [EBench](/publication/2026-report-ebench-astra/) and RoboDojo.
 
 {% include agent-rl-demo.html %}

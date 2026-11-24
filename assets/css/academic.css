@@ -940,3 +940,15 @@ main:focus{
   .grounding-views, .feedback-flow { grid-template-columns: 1fr; }
   .grounding-views figure:last-child { max-width: 384px; }
 }
+
+.starua-case { padding: 8px 0; border-bottom: 1px solid var(--line, var(--border)); }
+.starua-case > summary { width: fit-content; cursor: pointer; color: var(--accent); font-weight: 600; }
+.starua-case > p { margin: 10px 0 14px; font-size: 14px; }
+.starua-frames { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.starua-frames figure { min-width: 0; }
+.starua-frames img { aspect-ratio: 4 / 3; object-fit: contain; background: #181b19; }
+.starua-frames figcaption { font-size: 13px; }
+.feedback-flow.starua-stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 600px) {
+  .starua-frames, .feedback-flow.starua-stages { grid-template-columns: 1fr; }
+}
