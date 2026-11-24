@@ -23,28 +23,14 @@
     <li><strong>Full-task reinforcement learning</strong><span>The agent acts through complete episodes. It receives feedback for reaching subgoals and finishing the task, including what happens after it closes the gripper.</span></li>
   </ol>
 
-  <section class="agent-example" aria-labelledby="grounding-title">
-    <h3 id="grounding-title">Read the wrist camera</h3>
-    <p>Try one of the spatial questions used in training. The overhead view gives the scene context. Use the right wrist image to answer.</p>
+  <section class="agent-example" id="apple-case" aria-labelledby="grounding-title" data-skill-example>
+    <h3 id="grounding-title">Picking up an apple</h3>
     <div class="grounding-views">
-      <figure><img src="{{ '/assets/images/research/agent-rl/vqa-overlook.png' | relative_url }}" alt="Overhead view of two robot arms, an apple beside the right hand, and a fruit bowl on the left." width="640" height="360" loading="lazy"><figcaption>Scene view · pick up the apple and place it in the bowl</figcaption></figure>
-      <figure><div class="wrist-reference"><img src="{{ '/assets/images/research/agent-rl/vqa-wrist.png' | relative_url }}" alt="Right wrist camera: the apple appears at the top centre, above the open gripper fingers." width="384" height="288" loading="lazy"><span class="wrist-grid" aria-hidden="true"></span></div><figcaption>Right wrist view · 3 × 3 image regions</figcaption></figure>
+      <figure><img src="{{ '/assets/images/research/agent-rl/vqa-overlook.png' | relative_url }}" alt="Two robot hands face a tabletop with a red apple on the right and a wooden bowl on the left." width="640" height="360" loading="lazy"><figcaption><strong>Overhead view.</strong> The right hand has to carry the apple to the bowl on the left.</figcaption></figure>
+      <figure><img src="{{ '/assets/images/research/agent-rl/vqa-wrist.png' | relative_url }}" alt="The right wrist camera shows the apple ahead of the open fingertips." width="384" height="288" loading="lazy"><figcaption><strong>Right wrist at the same pose.</strong> The fingers are open. The simulator measures their tips <strong>5.2 cm above the top of the apple</strong>.</figcaption></figure>
     </div>
-    <div class="vqa-question" data-vqa-question>
-      <h4 id="location-question">In which region is the centre of the apple?</h4>
-      <div class="vqa-answers" role="group" aria-labelledby="location-question" hidden>
-        {% assign cells = 'Top left,Top,Top right,Left,Centre,Right,Bottom left,Bottom,Bottom right' | split: ',' %}
-        {% for cell in cells %}<button type="button" data-vqa-answer="{{ cell }}" aria-pressed="false">{{ cell }}</button>{% endfor %}
-      </div>
-      <p class="vqa-feedback" role="status" aria-live="polite" data-vqa-feedback></p>
-      <details class="reference-answer"><summary>Reveal the reference answer</summary><p><strong>Top.</strong> The simulator places the centre of the apple in the top-middle cell. A matching choice earns 1 and any other cell earns 0.</p></details>
-    </div>
-    <details class="reference-answer"><summary>How high are the fingertips above the apple?</summary><p>The simulator measures a gap of about <strong>5.2 cm</strong>, which falls in the 3–10 cm clearance bin.</p></details>
-  </section>
-
-  <section class="agent-example" aria-labelledby="skills-title" data-skill-example>
-    <h3 id="skills-title">Follow a demonstration from apple to bowl</h3>
-    <p>These frames come from one recorded demonstration. The approach is the part practised in pre-grasp training. Lifting and releasing the apple belong to the full task.</p>
+    <h4 id="skills-title">From the table to the bowl</h4>
+    <p>A recorded demonstration of the same task shows the approach, lift, and release. Pre-grasp training focuses on lining up the hand while the apple stays in place.</p>
     <div class="skill-controls" role="group" aria-label="Explore manipulation skills" hidden>
       <button type="button" data-skill-target="skill-align" aria-controls="skill-align" aria-pressed="true">1. Align</button>
       <button type="button" data-skill-target="skill-grasp" aria-controls="skill-grasp" aria-pressed="false">2. Grasp &amp; lift</button>
@@ -57,4 +43,4 @@
     </div>
   </section>
 </section>
-<script src="{{ '/assets/js/agent-rl-demo.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/agent-rl-demo.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
