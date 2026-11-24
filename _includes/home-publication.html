@@ -13,5 +13,6 @@
     <p class="home-paper-summary">{{ paper.excerpt }}</p>
     {% include paper-links.html buttons=true %}
   </div>
+  {% if paper.minidemo == 'antmaze' %}{% include abi-replay.html compact=true %}{% endif %}
   {% include paper-demo.html compact=true %}
 </article>

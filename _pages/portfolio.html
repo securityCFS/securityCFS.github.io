@@ -6,3 +6,4 @@ permalink: /portfolio/
 <p>Project pages, implementations, and documentation for my selected work.</p>
 {% assign selected = site.publications | where: 'selected', true | sort: 'selected_order' %}
 {% for paper in selected %}{% include paper-card.html %}{% endfor %}
+{% include software.html %}

@@ -33,3 +33,5 @@ redirect_from:
   <div class="section-heading"><h2 id="ongoing-title">Ongoing Research</h2></div>
   {% for paper in papers %}{% if paper.category == 'ongoing' %}{% include home-publication.html %}{% endif %}{% endfor %}
 </section>
+
+{% include software.html %}

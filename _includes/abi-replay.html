@@ -1,0 +1,26 @@
+<details class="paper-demo abi-replay" data-abi-tracks="{{ '/assets/data/abi-antmaze.json' | relative_url }}"{% unless include.compact %} open{% endunless %}>
+  <summary>Try ABI in AntMaze</summary>
+  <div class="abi-panel" id="abi-demo">
+    <p class="abi-intro">Choose a goal for the ant. Both runs use the same frozen policy, starting state, and random seed. Only the blue run uses ABI to choose its actions.</p>
+    <div class="abi-interactive" hidden>
+      <figure class="abi-map">
+        <canvas width="480" height="480" role="img" aria-label="Recorded ant paths through a maze"></canvas>
+        <figcaption><span class="abi-start-symbol"></span> Start <span class="abi-goal-symbol"></span> Goal</figcaption>
+      </figure>
+      <div class="abi-controls">
+        <label for="abi-goal">Goal</label>
+        <select id="abi-goal"></select>
+        <dl class="abi-readings">
+          <div><dt><span class="abi-line"></span>With ABI</dt><dd data-guided></dd></div>
+          <div><dt><span class="abi-line abi-line--base"></span>Base policy</dt><dd data-base></dd></div>
+        </dl>
+        <label class="abi-timeline" for="abi-step">Step <span data-step></span></label>
+        <input id="abi-step" type="range" min="0" step="1">
+        <button type="button" data-play>Replay</button>
+      </div>
+    </div>
+    <p class="abi-message" role="status" hidden></p>
+    <noscript><p class="abi-source">Enable JavaScript to replay the paths, or <a href="{{ paper.videos.first.src | relative_url }}">watch the project video</a>.</p></noscript>
+    <p class="abi-source">These are recorded trajectories. Set your own start and goal in the <a href="{{ paper.playgroundurl }}?env=antmaze-medium-navigate">live AntMaze Playground</a>.</p>
+  </div>
+</details>

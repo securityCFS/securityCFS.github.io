@@ -901,6 +901,9 @@ main:focus{
 .paper-demo .research-video h3 { font-size: 12px; }
 .paper-demo .research-video figcaption { font-size: 11px; }
 .paper-demo-gallery { margin: 30px 0; }
+.software-project { padding: 12px 0; }
+.software-project h3 { margin: 0 0 6px; font-size: 16px; }
+.software-project p { margin: 0 0 10px; font-size: 14px; }
 @media print { .paper-demo, .paper-demo-gallery { display: none; } }
 
 .agent-examples { margin-top: 36px; }

@@ -1,7 +1,8 @@
-{% if paper.paperurl or paper.projecturl or paper.codeurl or paper.docsurl or paper.slidesurl or paper.publisherurl or paper.benchmarkurl or paper.demourl %}
+{% if paper.paperurl or paper.projecturl or paper.playgroundurl or paper.codeurl or paper.docsurl or paper.slidesurl or paper.publisherurl or paper.benchmarkurl or paper.demourl %}
 <div class="paper-links" aria-label="Resources for {{ paper.short_name | escape }}">
 {% if paper.paperurl %}<a href="{{ paper.paperurl }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
 {% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project</a>{% endif %}
+{% if paper.playgroundurl %}<a href="{{ paper.playgroundurl }}">Playground</a>{% endif %}
 {% if paper.demourl %}<a href="{{ paper.demourl | relative_url }}">Explore examples</a>{% endif %}
 {% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code</a>{% endif %}
 {% if paper.docsurl %}<a href="{{ paper.docsurl }}">Docs</a>{% endif %}

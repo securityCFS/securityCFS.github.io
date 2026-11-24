@@ -6,6 +6,7 @@ layout: academic
 {% include paper-authors.html full=true %}
 {% include paper-links.html %}
 <p class="paper-lead">{{ page.excerpt }}</p>
+{% if paper.minidemo == 'antmaze' %}{% include abi-replay.html %}{% endif %}
 {% include paper-demo.html %}
 {% if page.image %}<figure class="paper-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{{ page.image_caption }}</figcaption></figure>{% endif %}
 {{ content }}
