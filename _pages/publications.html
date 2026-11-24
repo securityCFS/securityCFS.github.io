@@ -6,17 +6,39 @@ permalink: /publications/
 excerpt: "Conference papers, preprints, and collaborative technical reports by Yifei Yao."
 ---
 <p class="page-intro">Papers and ongoing research projects. Conference versions and preprints of the same work appear as a single entry.</p>
-<div class="page-actions"><a href="{{ site.author.googlescholar }}">Google Scholar</a><a href="{{ '/files/publications.bib' | relative_url }}" download>Download BibTeX</a></div>
+<div class="page-actions">
+  <a class="action-pill" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    Google Scholar
+  </a>
+  <a class="action-pill" href="{{ '/files/publications.bib' | relative_url }}" download>
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download BibTeX
+  </a>
+</div>
 <div class="publication-tools" data-publication-tools hidden>
-<label for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Search title, author, or topic…" autocomplete="off">
-<div class="topic-filters" role="group" aria-label="Filter publications by topic">
-<button type="button" data-filter="all" aria-pressed="true">All</button>
-<button type="button" data-filter="Humanoid control" aria-pressed="false">Humanoid control</button>
-<button type="button" data-filter="Offline RL" aria-pressed="false">Offline RL</button>
-<button type="button" data-filter="Embodied agents" aria-pressed="false">Embodied agents</button>
-<button type="button" data-filter="World action models" aria-pressed="false">World action models</button>
-<button type="button" data-filter="UAV control" aria-pressed="false">UAV control</button>
-</div><p class="filter-status" role="status" aria-live="polite" data-filter-status></p></div>
+  <label for="publication-search">Search &amp; filter</label>
+  <div class="search-field">
+    <svg class="search-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="publication-search" type="search" placeholder="Search title, author, venue, or topic…" autocomplete="off">
+  </div>
+  <div class="topic-filters" role="group" aria-label="Filter publications by topic">
+    <button type="button" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-filter="Humanoid control" aria-pressed="false">Humanoid control</button>
+    <button type="button" data-filter="Offline RL" aria-pressed="false">Offline RL</button>
+    <button type="button" data-filter="Embodied agents" aria-pressed="false">Embodied agents</button>
+    <button type="button" data-filter="World action models" aria-pressed="false">World action models</button>
+    <button type="button" data-filter="UAV control" aria-pressed="false">UAV control</button>
+  </div>
+  <p class="filter-status" role="status" aria-live="polite" data-filter-status></p>
+</div>
 {% assign papers = site.publications | sort: 'date' | reverse %}
-{% for category in site.publication_category %}<section class="publication-group" data-publication-group><h2>{{ category[1].title }}</h2>{% for paper in papers %}{% if paper.category == category[0] %}{% include paper-card.html compact=true citation=true %}{% endif %}{% endfor %}</section>{% endfor %}
+{% for category in site.publication_category %}
+<section class="publication-group" data-publication-group>
+  <h2>{{ category[1].title }}</h2>
+  <div class="publication-group-list">
+    {% for paper in papers %}{% if paper.category == category[0] %}{% include paper-card.html compact=true citation=true %}{% endif %}{% endfor %}
+  </div>
+</section>
+{% endfor %}
 <p class="empty-state" data-empty-state hidden>No publications match your search. Try another title, author, or topic.</p>

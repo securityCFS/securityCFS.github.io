@@ -1,17 +1,39 @@
 ---
 layout: academic
 ---
-<div class="paper-meta"><span class="venue-badge">{{ page.venue_short }}</span> <span>{{ page.publication_year }} · {{ page.status }}</span></div>
 {% assign paper = page %}
+<div class="paper-meta paper-meta--detail">
+  <span class="venue-badge venue-badge--{{ page.category }}">{{ page.venue_short }}</span>
+  <span class="meta-text">{{ page.publication_year }}{% if page.status %} · {{ page.status }}{% endif %}</span>
+  {% if page.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}
+</div>
 {% include paper-authors.html full=true %}
 {% include paper-links.html %}
 <p class="paper-lead">{{ page.excerpt }}</p>
 {% include paper-demo.html %}
 {% if paper.playground_scenes %}{% include abi-playground.html %}{% endif %}
-{% if page.image %}<figure class="paper-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{{ page.image_caption }}</figcaption></figure>{% endif %}
-{{ content }}
-{% if page.bibtex %}<h2>Reference</h2>
-{% include paper-citation.html %}
+{% if page.image %}
+<figure class="paper-figure">
+  <button class="figure-zoom-trigger" type="button" data-zoom-src="{{ page.image | relative_url }}" data-zoom-alt="{{ page.image_alt | escape }}" data-zoom-caption="{{ page.image_caption | escape }}" aria-label="Inspect figure at full size">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}">
+    <span class="figure-zoom-hint" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
+      Zoom
+    </span>
+  </button>
+  {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+</figure>
 {% endif %}
-{% if page.sourceurl %}<p class="muted">Metadata checked {{ page.verified_on | date: '%B %d, %Y' }}. <a href="{{ page.sourceurl }}">Original source</a></p>{% endif %}
-<p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>
+<div class="paper-prose">
+{{ content }}
+</div>
+{% if page.bibtex %}
+<section class="paper-reference" aria-labelledby="ref-heading">
+  <h2 id="ref-heading">Citation</h2>
+  {% include paper-citation.html open=true %}
+</section>
+{% endif %}
+<footer class="paper-detail-footer">
+  {% if page.sourceurl %}<p class="muted">Metadata verified {{ page.verified_on | date: '%B %d, %Y' }} · <a href="{{ page.sourceurl }}" target="_blank" rel="noopener noreferrer">Original source</a></p>{% endif %}
+  <p class="back-link"><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
+</footer>

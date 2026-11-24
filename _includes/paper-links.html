@@ -1,14 +1,39 @@
-{% if paper.paperurl or paper.projecturl or paper.playgroundurl or paper.codeurl or paper.docsurl or paper.slidesurl or paper.publisherurl or paper.benchmarkurl or paper.demourl %}
+{% assign slug = paper.url | slugify %}
+{% assign has_inline_toggles = false %}
+{% if include.show_demos and paper.videos %}{% assign has_inline_toggles = true %}{% endif %}
+{% if include.show_playground and paper.playground_scenes %}{% assign has_inline_toggles = true %}{% endif %}
+{% if include.show_citation and paper.bibtex %}{% assign has_inline_toggles = true %}{% endif %}
+{% assign has_std_links = false %}
+{% if paper.paperurl or paper.projecturl or paper.playgroundurl or paper.codeurl or paper.docsurl or paper.slidesurl or paper.publisherurl or paper.benchmarkurl or paper.demourl %}{% assign has_std_links = true %}{% endif %}
+{% if has_std_links or has_inline_toggles %}
 <div class="paper-links" aria-label="Resources for {{ paper.short_name | escape }}">
-{% if paper.paperurl %}<a href="{{ paper.paperurl }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
-{% if paper.projecturl %}<a href="{{ paper.projecturl }}">Project</a>{% endif %}
-{% if paper.playgroundurl %}<a href="{{ paper.playgroundurl }}">Playground</a>{% endif %}
-{% if paper.demourl %}<a href="{{ paper.demourl | relative_url }}">Explore examples</a>{% endif %}
-{% if paper.codeurl %}<a href="{{ paper.codeurl }}">Code</a>{% endif %}
-{% if paper.docsurl %}<a href="{{ paper.docsurl }}">Docs</a>{% endif %}
-{% if paper.slidesurl %}<a href="{{ paper.slidesurl | relative_url }}">Slides</a>{% endif %}
-{% if paper.publisherurl %}<a href="{{ paper.publisherurl }}">{{ paper.publisher_label | default: 'Publisher' }}</a>{% endif %}
-
-{% if paper.benchmarkurl %}<a class="benchmark-link" href="{{ paper.benchmarkurl }}">Benchmark</a>{% endif %}
+{% if paper.paperurl %}<a href="{{ paper.paperurl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
+{% if paper.projecturl %}<a href="{{ paper.projecturl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Project</a>{% endif %}
+{% if paper.playgroundurl %}<a class="paper-link--featured" href="{{ paper.playgroundurl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>Playground</a>{% endif %}
+{% if paper.demourl %}<a class="paper-link--featured" href="{{ paper.demourl | relative_url }}"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>Explore examples</a>{% endif %}
+{% if paper.codeurl %}<a href="{{ paper.codeurl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Code</a>{% endif %}
+{% if paper.docsurl %}<a href="{{ paper.docsurl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>Docs</a>{% endif %}
+{% if paper.slidesurl %}<a href="{{ paper.slidesurl | relative_url }}"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Slides</a>{% endif %}
+{% if paper.publisherurl %}<a href="{{ paper.publisherurl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>{{ paper.publisher_label | default: 'Publisher' }}</a>{% endif %}
+{% if paper.benchmarkurl %}<a class="benchmark-link" href="{{ paper.benchmarkurl }}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Benchmark</a>{% endif %}
+{% if has_std_links and has_inline_toggles %}<span class="paper-links-sep" aria-hidden="true" data-drawer-ui hidden></span>{% endif %}
+{% if include.show_demos and paper.videos %}
+<button class="paper-link-toggle" type="button" data-drawer-target="demo-{{ slug }}" aria-expanded="false" aria-controls="demo-{{ slug }}" hidden>
+  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+  {% if paper.video_label %}{{ paper.video_label }}{% elsif paper.videos.size == 1 %}Video demo{% else %}Demos ({{ paper.videos.size }}){% endif %}
+</button>
+{% endif %}
+{% if include.show_playground and paper.playground_scenes %}
+<button class="paper-link-toggle" type="button" data-drawer-target="playground-{{ slug }}" aria-expanded="false" aria-controls="playground-{{ slug }}" hidden>
+  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+  Try scenes
+</button>
+{% endif %}
+{% if include.show_citation and paper.bibtex %}
+<button class="paper-link-toggle" type="button" data-drawer-target="bib-{{ slug }}" aria-expanded="false" aria-controls="bib-{{ slug }}" hidden>
+  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+  BibTeX
+</button>
+{% endif %}
 </div>
 {% endif %}

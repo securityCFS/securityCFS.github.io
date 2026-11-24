@@ -1,4 +1,5 @@
-<details class="paper-demo abi-playground" data-abi-playground{% unless include.compact %} open{% endunless %}>
+{% assign slug = paper.url | slugify %}
+<details class="paper-demo abi-playground{% if include.compact %} card-drawer{% endif %}"{% if include.compact %} id="playground-{{ slug }}" data-card-drawer{% endif %} data-abi-playground{% unless include.compact %} open{% endunless %}>
   <summary>Interactive playground</summary>
   <div id="abi-demo" class="abi-scene-picker">
     <p>Choose a scene to run in your browser. The green robot uses ABI guidance. The gray robot runs the same frozen policy without it.</p>

@@ -1,15 +1,36 @@
 {% if paper.videos %}
-{% if include.compact %}<details class="paper-demo"><summary>Watch {% if paper.video_label %}{{ paper.video_label | downcase }}{% elsif paper.videos.size == 1 %}demo{% else %}demos{% endif %}</summary>{% else %}<section class="paper-demo-gallery" aria-label="{{ paper.short_name | escape }} demonstrations"><h2>{% if paper.video_label %}{{ paper.video_label }}{% elsif paper.videos.size == 1 %}Demo{% else %}Demos{% endif %}</h2>{% endif %}
+{% assign slug = paper.url | slugify %}
+{% if include.compact %}
+<details class="paper-demo card-drawer" id="demo-{{ slug }}" data-card-drawer>
+  <summary>
+    <svg class="demo-play-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+    <span>Watch {% if paper.video_label %}{{ paper.video_label | downcase }}{% elsif paper.videos.size == 1 %}demo{% else %}{{ paper.videos.size }} demos{% endif %}</span>
+  </summary>
+  <div class="paper-demo-body">
+{% else %}
+<section class="paper-demo-gallery" aria-label="{{ paper.short_name | escape }} demonstrations">
+  <h2>{% if paper.video_label %}{{ paper.video_label }}{% elsif paper.videos.size == 1 %}Demo{% else %}Demos{% endif %}</h2>
+{% endif %}
 {% for video in paper.videos %}
 <figure class="research-video">
-  <h3>{{ video.title }}</h3>
-  <video controls playsinline preload="none" width="{{ video.width }}" height="{{ video.height }}" poster="{{ video.poster | relative_url }}" aria-label="{{ video.title | escape }}">
-    <source src="{{ video.src | relative_url }}" type="video/mp4">
-    {% if video.captions %}<track kind="captions" src="{{ video.captions | relative_url }}" srclang="en" label="English" default>{% endif %}
-    <a href="{{ video.src | relative_url }}">Watch {{ video.title }}</a>
-  </video>
-  <figcaption>{{ video.caption }}{% if video.source %} <a href="{{ video.source }}">Source</a>{% endif %}</figcaption>
+  <div class="research-video-header">
+    <h3>{{ video.title }}</h3>
+    {% if video.source %}<a class="video-source-link" href="{{ video.source }}" target="_blank" rel="noopener noreferrer">Source</a>{% endif %}
+  </div>
+  <div class="research-video-stage">
+    <video controls playsinline preload="none" width="{{ video.width }}" height="{{ video.height }}" poster="{{ video.poster | relative_url }}" aria-label="{{ video.title | escape }}">
+      <source src="{{ video.src | relative_url }}" type="video/mp4">
+      {% if video.captions %}<track kind="captions" src="{{ video.captions | relative_url }}" srclang="en" label="English" default>{% endif %}
+      <a href="{{ video.src | relative_url }}">Watch {{ video.title }}</a>
+    </video>
+  </div>
+  <figcaption>{{ video.caption }}</figcaption>
 </figure>
 {% endfor %}
-{% if include.compact %}</details>{% else %}</section>{% endif %}
+{% if include.compact %}
+  </div>
+</details>
+{% else %}
+</section>
+{% endif %}
 {% endif %}

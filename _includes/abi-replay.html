@@ -1,5 +1,5 @@
-<details class="paper-demo abi-replay" data-abi-tracks="{{ '/assets/data/abi-antmaze.json' | relative_url }}">
-  <summary>Preview the AntMaze trajectories</summary>
+<details class="abi-replay" data-abi-tracks="{{ '/assets/data/abi-antmaze.json' | relative_url }}">
+  <summary class="abi-replay-link">Preview recorded AntMaze trajectories</summary>
   <div class="abi-panel" id="abi-antmaze-replay">
     <p class="abi-intro">Choose a recorded goal and scrub through the two paths. The runs share the same starting state, frozen policy, and random seed.</p>
     <div class="abi-interactive" hidden>
@@ -21,6 +21,6 @@
     </div>
     <p class="abi-message" role="status" hidden></p>
     <noscript><p class="abi-source">Enable JavaScript to replay the paths, or <a href="{{ paper.videos.first.src | relative_url }}">watch the project video</a>.</p></noscript>
-    <p class="abi-source">Set your own start and goal in the <a href="{{ paper.playgroundurl }}?env=antmaze-medium-navigate">live AntMaze Playground</a>.</p>
+    <p class="abi-source">Set your own start and goal in the <a href="{{ paper.playgroundurl }}?env=antmaze-medium-navigate" target="_blank" rel="noopener noreferrer">live AntMaze Playground</a>.</p>
   </div>
 </details>

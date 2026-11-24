@@ -7,7 +7,20 @@ excerpt: "Yifei Yao — Research Engineer in Robotics at Shanghai AI Laboratory,
 redirect_from:
   - /resume
 ---
-<div class="page-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><a href="{{ '/files/publications.bib' | relative_url }}" download>Publication list / BibTeX</a><button type="button" data-print-cv hidden>Print / Save as PDF</button></div>
+<div class="page-actions">
+  <a class="action-pill" href="mailto:{{ site.author.email }}">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    {{ site.author.email }}
+  </a>
+  <a class="action-pill" href="{{ '/files/publications.bib' | relative_url }}" download>
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Publication list / BibTeX
+  </a>
+  <button class="action-pill action-pill--primary" type="button" data-print-cv hidden>
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+    Print / Save as PDF
+  </button>
+</div>
 <div class="cv-content" markdown="1">
 
 Research Engineer in Robotics at **Shanghai AI Laboratory**, seeking **PhD opportunities** in robot learning and embodied AI. My research interests include **offline reinforcement learning**, **agentic reinforcement learning**, **embodied agents**, and **robotic manipulation**.
@@ -75,7 +88,7 @@ Major GPA: 3.69/4.0 · Outstanding Graduate of Shanghai Jiao Tong University
 {% for group in honor_groups %}
 ### {{ group.name }}
 <ul class="cv-honors-list">
-{% for honor in group.items %}<li><strong>{{ honor.title }}</strong> ({{ honor.year }})<br><span class="muted">{{ honor.institution }}</span></li>{% endfor %}
+{% for honor in group.items %}<li><strong>{{ honor.title }}</strong> <span class="cv-honor-year">({{ honor.year }})</span><br><span class="muted">{{ honor.institution }}</span></li>{% endfor %}
 </ul>
 {% endfor %}
 

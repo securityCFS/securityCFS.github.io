@@ -1,17 +1,30 @@
-<article class="home-paper" data-publication>
+<article class="home-paper{% if paper.category == 'ongoing' %} home-paper--ongoing{% endif %}" data-publication>
   {% assign paper_year = paper.publication_year | append: '' %}
   {% assign media_image = paper.home_image | default: paper.image %}
-  {% if media_image %}<div class="home-paper-media">
-    <span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>
-    <a class="home-paper-image" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ media_image | relative_url }}" alt="" loading="lazy" width="192" height="128"></a>
-  </div>{% endif %}
+  {% assign is_photo = false %}
+  {% if media_image contains 'real-poster' or media_image contains 'manipulation-poster' or media_image contains 'vqa-overlook' or media_image contains 'abi_video_poster' %}{% assign is_photo = true %}{% endif %}
+  <div class="home-paper-media">
+    {% if media_image %}
+    <a class="home-paper-image {% if is_photo %}home-paper-image--photo{% else %}home-paper-image--figure{% endif %}" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ media_image | relative_url }}" alt=""{% unless include.eager %} loading="lazy"{% endunless %} decoding="async" width="210" height="130">
+    </a>
+    {% else %}
+    <a class="home-paper-stub" href="{{ paper.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <span class="stub-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>
+      <span class="stub-topic">{{ paper.topic }}</span>
+    </a>
+    {% endif %}
+  </div>
   <div class="home-paper-body">
-    {% unless media_image %}<span class="home-paper-venue">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>{% endunless %}
+    <div class="paper-meta">
+      <span class="venue-badge venue-badge--{{ paper.category }}">{{ paper.venue_short }}{% unless paper.venue_short contains paper_year %} {{ paper.publication_year }}{% endunless %}</span>
+      {% if paper.equal_contributors contains site.author.name %}<span class="contribution-badge">Co-first author</span>{% endif %}
+      {% if paper.status == 'Accepted' or paper.show_status %}<span class="meta-status">{{ paper.status }}</span>{% endif %}
+    </div>
     <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
     {% include paper-authors.html hide_legend=true %}
-    {% if paper.status == 'Accepted' or paper.show_status %}<p class="home-paper-status">{{ paper.status }}</p>{% endif %}
     <p class="home-paper-summary">{{ paper.excerpt }}</p>
-    {% include paper-links.html buttons=true %}
+    {% include paper-links.html show_demos=true show_playground=true %}
   </div>
   {% include paper-demo.html compact=true %}
   {% if paper.playground_scenes %}{% include abi-playground.html compact=true %}{% endif %}

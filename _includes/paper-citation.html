@@ -1,1 +1,17 @@
-<details class="citation"><summary>BibTeX</summary>{% if paper.bibtex_source %}<p class="muted"><a href="{{ paper.bibtex_source }}">{{ paper.bibtex_source_label }}</a></p>{% endif %}<pre><code>{{ paper.bibtex | escape }}</code></pre><button class="copy-citation" type="button" data-copy-citation hidden>Copy BibTeX</button><span class="copy-status" role="status" aria-live="polite"></span></details>
+{% assign slug = paper.url | slugify %}
+<details class="citation{% unless include.open %} card-drawer{% endunless %}"{% unless include.open %} id="bib-{{ slug }}" data-card-drawer{% endunless %}{% if include.open %} open{% endif %}>
+  <summary>
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+    <span>BibTeX</span>
+  </summary>
+  <div class="citation-panel">
+    <div class="citation-toolbar">
+      {% if paper.bibtex_source %}<a class="citation-source" href="{{ paper.bibtex_source }}" target="_blank" rel="noopener noreferrer">{{ paper.bibtex_source_label }}</a>{% else %}<span class="citation-source">BibTeX entry</span>{% endif %}
+      <div class="citation-actions">
+        <span class="copy-status" role="status" aria-live="polite"></span>
+        <button class="copy-citation" type="button" data-copy-citation hidden>Copy BibTeX</button>
+      </div>
+    </div>
+    <pre><code>{{ paper.bibtex | escape }}</code></pre>
+  </div>
+</details>
